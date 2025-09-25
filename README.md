@@ -33,3050 +33,1162 @@ Este es mi plan de estudios personal y exhaustivo para dominar TypeScript, desde
 27. [Módulo 27: gRPC, WebSockets y Comunicación en Tiempo Real](#-módulo-27-grpc-websockets-y-comunicación-en-tiempo-real-con-ts)
 28. [Módulo 28: Serverless, Edge y Cloud Functions](#-módulo-28-serverless-edge-y-cloud-functions-en-typescript)
 29. [Módulo 29: Microservicios y Distribución](#-módulo-29-microservicios-y-distribución-en-typescript)
+30. [Módulo 30: Monorepos, Escalabilidad y Gestión Empresarial](#-módulo-30-monorepos-escalabilidad-y-gestión-empresarial-con-typescript)
+31. [Módulo 31: TypeScript en DevOps y CI/CD](#-módulo-31-typescript-en-devops-y-cicd)
+32. [Módulo 32: TypeScript en Inteligencia Artificial y Machine Learning](#-módulo-32-typescript-en-inteligencia-artificial-y-machine-learning)
+33. [Módulo 33: TypeScript en IoT y Sistemas Embebidos](#-módulo-33-typescript-en-iot-y-sistemas-embebidos)
+34. [Módulo 34: TypeScript en Finanzas y Sistemas Críticos](#-módulo-34-typescript-en-finanzas-y-sistemas-críticos)
+35. [Módulo 35: Big Data, Streams y Procesamiento Masivo](#-módulo-35-big-data-streams-y-procesamiento-masivo-con-typescript)
+36. [Módulo 36: Tiempo Real Avanzado y Sistemas de Alta Frecuencia](#-módulo-36-tiempo-real-avanzado-y-sistemas-de-alta-frecuencia)
+37. [Módulo 37: TypeScript en Realidad Aumentada (AR) y Realidad Virtual (VR)](#-módulo-37-typescript-en-realidad-aumentada-ar-y-realidad-virtual-vr)
+38. [Módulo 38: TypeScript en Blockchain y Web3](#-módulo-38-typescript-en-blockchain-y-web3)
+39. [Módulo 39: TypeScript en Ciberseguridad](#-módulo-39-typescript-en-ciberseguridad)
 
 ---
 
 ## 📘 Módulo 1: Fundamentos y Sintaxis de TypeScript
-
 > **Propósito:** Aprender la estructura del lenguaje, sus tipos básicos y cómo configurar el entorno inicial.
-
-- [ ] ¿Qué es TypeScript y por qué usarlo?
-- [ ] Diferencias clave entre JS y TS
-- [ ] Instalación de Node.js y npm
-- [ ] Instalación de TypeScript global y local
-- [ ] Comandos básicos tsc
-- [ ] Creación de tu primer archivo .ts
-- [ ] Configuración inicial con tsc --init
-- [ ] Introducción al tsconfig.json
-- [ ] Tipos primitivos (string, number, boolean)
-- [ ] null y undefined en TS
-- [ ] Tipo any y riesgos de usarlo
-- [ ] Tipo unknown como alternativa segura
-- [ ] Tipo never y cuándo se usa
-- [ ] Tipo void en funciones
-- [ ] Variables tipadas con let y const
-- [ ] Inferencia de tipos automática
-- [ ] Literales de tipo (ejemplo: "red" | "blue")
-- [ ] Union types (|)
-- [ ] Intersection types (&)
-- [ ] Alias de tipos con type
-- [ ] Objetos tipados
-- [ ] Propiedades opcionales ?
-- [ ] Propiedades readonly
-- [ ] Arrays tipados (string[], Array<number>)
-- [ ] Tuplas en TS
-- [ ] Tuplas con longitud fija
-- [ ] Tuplas con elementos opcionales
-- [ ] Uso de enum
-- [ ] const enum y optimización
-- [ ] Enums numéricos
-- [ ] Enums de string
-- [ ] Funciones tipadas (parámetros + retorno)
-- [ ] Parámetros opcionales en funciones
-- [ ] Parámetros por defecto
-- [ ] Parámetros REST en funciones
-- [ ] Funciones flecha tipadas
-- [ ] Tipado del valor this
-- [ ] Sobrecarga de funciones
-- [ ] Funciones que retornan never
-- [ ] Tipado de objetos como argumentos
-- [ ] Funciones como tipos
-- [ ] Callbacks tipados
-- [ ] Objetos literales y “freshness”
-- [ ] Aserciones de tipo (as)
-- [ ] satisfies para validación de tipos
-- [ ] Narrowing con typeof
-- [ ] Narrowing con instanceof
-- [ ] Narrowing con in
-- [ ] Narrowing por control de flujo
-- [ ] Exhaustividad y never
-- [ ] Tipos de inferencia contextual
-- [ ] Reglas de compatibilidad estructural
-- [ ] Subtipado ancho y estrecho
-- [ ] Introducción a keyof
-- [ ] typeof aplicado a valores
-- [ ] Tipos indexados (obj[key])
-- [ ] Index signatures ([key: string]: any)
-- [ ] Pick, Omit y Partial
-- [ ] Required y Readonly
-- [ ] Record<K,V>
-- [ ] Aserciones no nulas (!)
-- [ ] Encadenamiento opcional ?.
-- [ ] Operador nullish ??
-- [ ] Revisión de errores comunes de TS
-- [ ] Configuración de strict en tsconfig.json
-- [ ] noImplicitAny
-- [ ] strictNullChecks
-- [ ] noUnusedLocals y noUnusedParameters
-- [ ] exactOptionalPropertyTypes
-- [ ] Configuración target y module
-- [ ] Carpetas rootDir y outDir
-- [ ] Archivos de salida .js
-- [ ] Sourcemaps y debugging
-- [ ] Ejecutar TS con ts-node
-- [ ] Ejecutar con tsx
-- [ ] Bundlers: introducción a tsup
-- [ ] Diferencias entre CommonJS y ESM
-- [ ] export default vs export named
-- [ ] import type
-- [ ] Módulos ambient (declare module)
-- [ ] Librerías de tipos @types/*
-- [ ] Uso de DefinitelyTyped
-- [ ] Manejo de errores de tsserver
-- [ ] Refactorizaciones en VS Code
-- [ ] Quick fixes automáticos
-- [ ] Patrones anti-any
-- [ ] Uso correcto de unknown
-- [ ] Buenas prácticas de naming
-- [ ] Documentación con TSDoc
-- [ ] Tipos de comentario que ayudan a inferencia
-- [ ] Integración con ESLint
-- [ ] Integración con Prettier
-- [ ] Configuración de include y exclude
-- [ ] Librerías estándar DOM
-- [ ] Librerías estándar Node
-- [ ] Problemas comunes en migración JS→TS
-- [ ] Estrategia incremental de migración
-- [ ] Uso de checkJs
-- [ ] Tipado en archivos .d.ts
-- [ ] Mini-proyecto: Carrito de compras tipado
-
 ## 📘 Módulo 2: Interfaces y Tipos Estructurales
-
 > **Propósito:** Dominar `type` e `interface`, junto con patrones de diseño tipados.
-
-- [ ] Diferencia entre type e interface
-- [ ] Extensión de interfaces
-- [ ] Implementación de interfaces en clases
-- [ ] Merging de interfaces
-- [ ] Interfaces con propiedades opcionales
-- [ ] Interfaces con propiedades indexadas
-- [ ] Interfaces con métodos
-- [ ] Interfaces con propiedades readonly
-- [ ] Interfaces genéricas
-- [ ] Interfaces híbridas (función + objeto)
-- [ ] type para uniones
-- [ ] type para intersecciones
-- [ ] Aliases recursivos
-- [ ] interface vs type performance
-- [ ] Convenciones de nombres
-- [ ] Patrones de DTO (Data Transfer Object)
-- [ ] Patrones de Entity
-- [ ] Tipado de colecciones con interfaces
-- [ ] Estructuras JSON tipadas
-- [ ] Interfaces para APIs externas
-- [ ] Tipado de datos provenientes de fetch
-- [ ] Validación de tipos con Zod
-- [ ] Interfaces vs clases abstractas
-- [ ] Uso de extends en interfaces
-- [ ] Reutilización de Pick y Omit en interfaces
-- [ ] Modelado de datos con discriminated unions
-- [ ] Narrowing en discriminated unions
-- [ ] Exhaustividad en discriminated unions
-- [ ] Patrones algebraicos con type
-- [ ] ADTs (Algebraic Data Types) en TS
-- [ ] Result/Option types
-- [ ] Opaque types
-- [ ] Branded types
-- [ ] Identificadores únicos tipados
-- [ ] Interfaces para eventos del DOM
-- [ ] Interfaces para eventos de Node.js
-- [ ] Interfaces de librerías como Express
-- [ ] Interfaces de librerías como React
-- [ ] Contratos de API REST
-- [ ] Contratos de GraphQL
-- [ ] Versionado de interfaces
-- [ ] Evolución de tipos en proyectos grandes
-- [ ] Estrategias de backward compatibility
-- [ ] Desventajas de abusar de type
-- [ ] Desventajas de abusar de interface
-- [ ] Refactorizaciones comunes de tipos
-- [ ] Utilidades TS para reestructuración
-- [ ] keyof aplicado a interfaces
-- [ ] Tipos condicionales sobre interfaces
-- [ ] Inferencia de tipos en objetos grandes
-- [ ] Interfaces con valores literales
-- [ ] Interfaces con tipos genéricos
-- [ ] Interfaces de librerías de UI
-- [ ] Validación de contratos runtime
-- [ ] Serialización y deserialización segura
-- [ ] Modelado de config files
-- [ ] Modelado de rutas en aplicaciones
-- [ ] Patrones “shape first”
-- [ ] Patrones “contract first”
-- [ ] Patrones “schema first”
-- [ ] Comparación de class y interface
-- [ ] Interfaces para testing mocks
-- [ ] Interfaces para DTOs en bases de datos
-- [ ] Modelos Prisma tipados
-- [ ] Modelos Drizzle tipados
-- [ ] Contratos para microservicios
-- [ ] Interfaces para WebSockets
-- [ ] Contratos para colas (Rabbit/Kafka)
-- [ ] Interfaces para gRPC
-- [ ] Interfaces para tRPC
-- [ ] Generación de tipos desde OpenAPI
-- [ ] Generación de tipos desde GraphQL
-- [ ] Generación de tipos desde Zod
-- [ ] Serialización estricta
-- [ ] Contratos de eventos de dominio
-- [ ] Eventos CQRS con interfaces
-- [ ] Patrones DDD con interfaces
-- [ ] Interfaces en arquitectura hexagonal
-- [ ] Patrones de puerto-adaptador
-- [ ] Interfaces en Clean Architecture
-- [ ] Interfaces para repositorios
-- [ ] Interfaces para unit of work
-- [ ] Interfaces para casos de uso
-- [ ] Interfaces para handlers
-- [ ] Interfaces para servicios
-- [ ] Interfaces para controladores
-- [ ] Interfaces para entidades
-- [ ] Interfaces para value objects
-- [ ] Interfaces para agregados
-- [ ] Interfaces para factories
-- [ ] Interfaces para policies
-- [ ] Interfaces para specs
-- [ ] Interfaces para reglas de negocio
-- [ ] Interfaces para auth
-- [ ] Interfaces para roles
-- [ ] Interfaces para permisos
-- [ ] Interfaces para usuarios
-- [ ] Interfaces para sesiones
-- [ ] Interfaces para auditoría
-- [ ] Mini-proyecto: API tipada con interfaces
-
 ## 📘 Módulo 3: Funciones Tipadas y Genéricos Básicos
-
 > **Propósito:** Aprender a tipar funciones de forma precisa y dominar los fundamentos de los genéricos.
-
-- [ ] Sintaxis básica de funciones en TS
-- [ ] Tipado explícito de parámetros
-- [ ] Tipado explícito de retorno
-- [ ] Inferencia de retorno automática
-- [ ] Parámetros opcionales
-- [ ] Parámetros con valores por defecto
-- [ ] Parámetros REST (...args)
-- [ ] Funciones flecha tipadas
-- [ ] Funciones anónimas tipadas
-- [ ] Funciones nombradas tipadas
-- [ ] Funciones como valores
-- [ ] Tipos de función (type Fn = (x:number)=>string)
-- [ ] Funciones con varios parámetros
-- [ ] Retorno void
-- [ ] Retorno never
-- [ ] Callbacks tipados
-- [ ] Funciones de orden superior
-- [ ] Tipos de funciones genéricas
-- [ ] Constraints básicas (<T extends number>)
-- [ ] Funciones con varios genéricos
-- [ ] Default generics (<T=string>)
-- [ ] Inferencia de genéricos en llamadas
-- [ ] Genéricos con arrays
-- [ ] Genéricos con objetos
-- [ ] Genéricos con tuplas
-- [ ] keyof dentro de genéricos
-- [ ] Genéricos con extends keyof
-- [ ] Genéricos con funciones de mapeo
-- [ ] Inferencia con infer en condicionales
-- [ ] Sobrecarga de funciones
-- [ ] Firmas sobrecargadas múltiples
-- [ ] Implementación de sobrecargas
-- [ ] Contratos de callback estrictos
-- [ ] this tipado en funciones
-- [ ] Métodos en objetos tipados
-- [ ] Métodos opcionales
-- [ ] Métodos sobrecargados
-- [ ] Interfaces para funciones
-- [ ] Tipos alias para funciones
-- [ ] Funciones polimórficas con generics
-- [ ] Funciones variádicas tipadas
-- [ ] Narrowing en funciones
-- [ ] Guards como funciones (isString)
-- [ ] Predicados de tipo (param is Type)
-- [ ] Uso de predicados en arrays (filter)
-- [ ] Funciones recursivas tipadas
-- [ ] Funciones async tipadas
-- [ ] Retorno Promise<T>
-- [ ] Funciones async genéricas
-- [ ] Callbacks async tipados
-- [ ] await y tipado inferido
-- [ ] Funciones generadoras
-- [ ] Iteradores tipados
-- [ ] Generadores async tipados
-- [ ] Uso de IterableIterator<T>
-- [ ] Composición de funciones
-- [ ] Currying en TypeScript
-- [ ] Funciones parciales
-- [ ] Factories tipadas
-- [ ] Builders tipados
-- [ ] Inyección de dependencias tipada
-- [ ] Middleware tipado
-- [ ] Funciones utilitarias (identity)
-- [ ] Funciones de comparación tipadas
-- [ ] Funciones de validación tipadas
-- [ ] Funciones con tipos condicionales
-- [ ] Uso de unknown en funciones seguras
-- [ ] Funciones que lanzan errores
-- [ ] Tipado de Error personalizado
-- [ ] Retorno Result<T,E>
-- [ ] Retorno Option<T>
-- [ ] Funciones puras vs impuras
-- [ ] Side effects y tipado
-- [ ] Funciones memoizadas
-- [ ] Funciones debounce tipadas
-- [ ] Funciones throttle tipadas
-- [ ] Funciones para pipelines
-- [ ] Funciones para reducers
-- [ ] Funciones map/filter/reduce tipadas
-- [ ] Funciones flatMap tipadas
-- [ ] Funciones con template literal types
-- [ ] Tipado de fetch wrapper
-- [ ] Tipado de API calls
-- [ ] Funciones retry tipadas
-- [ ] Funciones timeout tipadas
-- [ ] Validación de inputs en funciones
-- [ ] Funciones de logging tipadas
-- [ ] Funciones de eventos tipadas
-- [ ] Funciones con overload de eventos
-- [ ] Funciones de orden superior FP
-- [ ] Inferencia avanzada en callbacks
-- [ ] Narrowing en predicados custom
-- [ ] Funciones que retornan otras funciones
-- [ ] Funciones de composición con generics
-- [ ] Funciones para factories dinámicas
-- [ ] Patrones de utilidades con funciones
-- [ ] Testing de funciones tipadas
-- [ ] Katas de funciones con generics
-- [ ] Ejercicio: librería de helpers tipados
-- [ ] Mini-proyecto: Librería de utilidades genéricas
-
 ## 📘 Módulo 4: Tipos Avanzados y Narrowing
-
 > **Propósito:** Profundizar en tipos condicionales, template literal types, mapped types y técnicas de narrowing avanzadas.
-
-- [ ] Tipos condicionales básicos (T extends U ? X : Y)
-- [ ] Inferencia con infer en condicionales
-- [ ] Uso de infer en arrays
-- [ ] Uso de infer en tuplas
-- [ ] Uso de infer en promesas
-- [ ] Uso de infer en funciones
-- [ ] Uso de infer en objetos
-- [ ] Narrowing básico con typeof
-- [ ] Narrowing con instanceof
-- [ ] Narrowing con in
-- [ ] Narrowing con igualdad estricta
-- [ ] Narrowing con comparación de literales
-- [ ] Narrowing con switch
-- [ ] Narrowing con if/else
-- [ ] Narrowing exhaustivo
-- [ ] Uso de never en exhaustividad
-- [ ] Narrowing con Array.isArray
-- [ ] Narrowing con is predicados
-- [ ] Narrowing personalizado con guards
-- [ ] Narrowing para enums
-- [ ] Narrowing para union types
-- [ ] Narrowing para discriminated unions
-- [ ] Narrowing para tuplas
-- [ ] Narrowing para objetos opcionales
-- [ ] Narrowing para objetos anidados
-- [ ] Template literal types básicos
-- [ ] Template literal types con Uppercase
-- [ ] Template literal types con Lowercase
-- [ ] Template literal types con Capitalize
-- [ ] Template literal types con Uncapitalize
-- [ ] Composición de templates
-- [ ] Tipos para construir keys dinámicas
-- [ ] Tipos para construir rutas
-- [ ] Tipos para prefijos dinámicos
-- [ ] Tipos para sufix dinámicos
-- [ ] Tipos para transformar unions de string
-- [ ] Tipos para validar formato de string
-- [ ] Tipos para paths de objetos
-- [ ] Tipos para acceso indexado seguro
-- [ ] Tipos de utilidades para templates
-- [ ] Uso avanzado de keyof
-- [ ] Uso de keyof typeof
-- [ ] Mapped types básicos
-- [ ] Mapped types readonly
-- [ ] Mapped types opcionales
-- [ ] Mapped types con remap keys
-- [ ] Uso de as en mapped types
-- [ ] Mapped types con template literals
-- [ ] Uso de Record con mapped types
-- [ ] Utility types construidos sobre mapped
-- [ ] Creación de DeepPartial<T>
-- [ ] Creación de DeepReadonly<T>
-- [ ] Creación de DeepRequired<T>
-- [ ] Creación de DeepNonNullable<T>
-- [ ] Creación de Mutable<T>
-- [ ] Uso de Pick + keyof
-- [ ] Uso de Omit + keyof
-- [ ] Creación de Values<T>
-- [ ] Creación de Keys<T>
-- [ ] Combinación de mapped + condicionales
-- [ ] Validación de tipos por estructura
-- [ ] Validación de tipos por valor
-- [ ] Validación de tipos con Zod
-- [ ] Tipos de branding avanzados
-- [ ] Opaque types vs branded types
-- [ ] Tipos para IDs únicos
-- [ ] Tipos para dominios específicos
-- [ ] Tipos nominales con intersecciones
-- [ ] Simulación de “newtypes”
-- [ ] Recursive types básicos
-- [ ] Recursive types en objetos
-- [ ] Recursive types en arrays
-- [ ] Recursive types en tuplas
-- [ ] Recursive types para JSON
-- [ ] Recursive types con condicionales
-- [ ] Uso de recursion + infer
-- [ ] Validación de recursión infinita
-- [ ] Patrones de recursion segura
-- [ ] Tipos que evalúan expresiones
-- [ ] Tipos que parsean strings
-- [ ] Tipos que validan números
-- [ ] Tipos que validan fechas
-- [ ] Tipos que validan correos
-- [ ] Tipos que validan URLs
-- [ ] Tipos que validan rutas
-- [ ] Tipos que validan SQL
-- [ ] Tipos que validan GraphQL
-- [ ] Tipos que validan JSON
-- [ ] Tipos que validan XML
-- [ ] Tipos que validan YAML
-- [ ] Patrones de type-level programming
-- [ ] Patrones de data-first vs type-first
-- [ ] Patrones de contract-first
-- [ ] Patrones de schema-first
-- [ ] Validación estática con tipos
-- [ ] Validación runtime vs compile time
-- [ ] Estrategias para debugging de tipos
-- [ ] Anti-patterns en tipos avanzados
-- [ ] Ejercicios de tipos condicionales
-- [ ] Mini-proyecto: Parser de rutas tipado
-
 ## 📘 Módulo 5: Objetos, Arrays, Tuplas y Estructuras Tipadas
-
 > **Propósito:** Dominar las colecciones, sus inferencias y usos avanzados.
-
-- [ ] Arrays tipados básicos
-- [ ] Array<T> vs T[]
-- [ ] Arrays multidimensionales
-- [ ] Arrays con readonly
-- [ ] Arrays inmutables (as const)
-- [ ] Tuplas básicas
-- [ ] Tuplas con readonly
-- [ ] Tuplas opcionales
-- [ ] Tuplas con rest elements
-- [ ] Tuplas variádicas
-- [ ] Inferencia de tuplas con as const
-- [ ] Indexación de arrays tipados
-- [ ] Indexación de tuplas
-- [ ] Narrowing en arrays
-- [ ] Narrowing en tuplas
-- [ ] Métodos map tipados
-- [ ] Métodos filter tipados
-- [ ] Métodos reduce tipados
-- [ ] Métodos flatMap tipados
-- [ ] Métodos find tipados
-- [ ] Métodos every tipados
-- [ ] Métodos some tipados
-- [ ] Métodos includes tipados
-- [ ] Métodos sort tipados
-- [ ] Métodos reverse tipados
-- [ ] Métodos slice tipados
-- [ ] Métodos splice tipados
-- [ ] Métodos concat tipados
-- [ ] Métodos join tipados
-- [ ] Arrays con union types
-- [ ] Arrays con intersecciones
-- [ ] Arrays de objetos tipados
-- [ ] Arrays de funciones tipadas
-- [ ] Arrays de enums
-- [ ] Arrays de tipos branded
-- [ ] Arrays heterogéneos
-- [ ] Arrays genéricos (Array<T>)
-- [ ] Funciones genéricas con arrays
-- [ ] Narrowing en arrays genéricos
-- [ ] Tuplas genéricas
-- [ ] Desestructuración de arrays tipados
-- [ ] Desestructuración de tuplas
-- [ ] Rest operator en desestructuración
-- [ ] Spread operator en arrays
-- [ ] Inferencia de tipos con spread
-- [ ] Creación de tipos con typeof arr[number]
-- [ ] Creación de tipos con typeof tuple[0]
-- [ ] Keys de arrays con keyof
-- [ ] Estructuras indexadas (Record)
-- [ ] Objetos indexados ({[k:string]:T})
-- [ ] Map tipado (Map<K,V>)
-- [ ] Set tipado (Set<T>)
-- [ ] WeakMap tipado
-- [ ] WeakSet tipado
-- [ ] Narrowing con instanceof Map
-- [ ] Narrowing con instanceof Set
-- [ ] Iteradores de Map
-- [ ] Iteradores de Set
-- [ ] Patrones de acceso seguro
-- [ ] Validación de arrays con Zod
-- [ ] Validación de objetos con Zod
-- [ ] Validación de tuplas con Zod
-- [ ] Objetos con propiedades opcionales
-- [ ] Objetos con propiedades readonly
-- [ ] Objetos con propiedades indexadas
-- [ ] Objetos con propiedades genéricas
-- [ ] Objetos con Record<string,any>
-- [ ] Objetos con Partial<T>
-- [ ] Objetos con Required<T>
-- [ ] Objetos con Readonly<T>
-- [ ] Objetos con Pick<T,K>
-- [ ] Objetos con Omit<T,K>
-- [ ] Objetos con Exclude<T,U>
-- [ ] Objetos con Extract<T,U>
-- [ ] Objetos con NonNullable<T>
-- [ ] Objetos con Parameters<T>
-- [ ] Objetos con ReturnType<T>
-- [ ] Objetos con InstanceType<T>
-- [ ] Objetos con ConstructorParameters<T>
-- [ ] Objetos con ThisType<T>
-- [ ] JSON tipado
-- [ ] Validación de JSON con tipos
-- [ ] Parseo de JSON con Zod
-- [ ] Arrays parseados de JSON
-- [ ] Tuplas parseadas de JSON
-- [ ] Objetos parseados de JSON
-- [ ] Arrays inmutables (freeze)
-- [ ] Objetos inmutables (freeze)
-- [ ] Deep readonly en objetos
-- [ ] Deep partial en objetos
-- [ ] Deep required en objetos
-- [ ] Deep nullable en objetos
-- [ ] Deep non-nullable en objetos
-- [ ] Patrones de colecciones tipadas
-- [ ] Patrones de estructuras complejas
-- [ ] Patrones de acceso seguro a arrays
-- [ ] Patrones de acceso seguro a objetos
-- [ ] Anti-patterns en arrays y objetos
-- [ ] Ejercicios de arrays y tuplas
-- [ ] Mini-proyecto: Gestor de inventario tipado
-
 ## 📘 Módulo 6: Clases y Programación Orientada a Objetos en TypeScript
-
 > **Propósito:** Dominar las clases, herencia, modificadores y patrones OOP en TS.
-
-- [ ] Sintaxis básica de clases
-- [ ] Propiedades tipadas
-- [ ] Propiedades opcionales
-- [ ] Propiedades readonly
-- [ ] Inicialización de propiedades
-- [ ] Métodos tipados
-- [ ] Métodos opcionales
-- [ ] Métodos static
-- [ ] Propiedades static
-- [ ] Constructores tipados
-- [ ] Sobrecarga de constructores
-- [ ] this en clases
-- [ ] Herencia básica (extends)
-- [ ] Sobrescritura de métodos
-- [ ] super en constructores
-- [ ] super en métodos
-- [ ] Acceso public
-- [ ] Acceso private
-- [ ] Acceso protected
-- [ ] Propiedades con inicialización corta
-- [ ] Abstract classes
-- [ ] Métodos abstractos
-- [ ] Implementación de interfaces en clases
-- [ ] Diferencia interface vs abstract class
-- [ ] Clases genéricas
-- [ ] Métodos genéricos en clases
-- [ ] Propiedades genéricas
-- [ ] Herencia genérica
-- [ ] Constraints en genéricos de clases
-- [ ] Factories con clases genéricas
-- [ ] Clases anónimas
-- [ ] Tipado de instancias
-- [ ] Tipado con InstanceType
-- [ ] Tipado con typeof clase
-- [ ] Tipado con keyof typeof
-- [ ] Narrowing con instanceof
-- [ ] Composición vs herencia
-- [ ] Mixins en TypeScript
-- [ ] Patrones de herencia múltiple (simulada)
-- [ ] Clases singleton
-- [ ] Clases builder
-- [ ] Clases factory
-- [ ] Clases service
-- [ ] Clases DAO (data access)
-- [ ] Clases para repositorios
-- [ ] Value objects con clases
-- [ ] Entities con clases
-- [ ] Aggregate roots con clases
-- [ ] Patrones CQRS con clases
-- [ ] Patrones DDD con clases
-- [ ] Patrón Adapter con clases
-- [ ] Patrón Proxy con clases
-- [ ] Patrón Facade con clases
-- [ ] Patrón Decorator con clases
-- [ ] Patrón Strategy con clases
-- [ ] Patrón Observer con clases
-- [ ] Patrón State con clases
-- [ ] Patrón Command con clases
-- [ ] Patrón Factory Method
-- [ ] Patrón Abstract Factory
-- [ ] Patrón Builder
-- [ ] Patrón Singleton
-- [ ] Patrón Prototype
-- [ ] Patrón Flyweight
-- [ ] Patrón Composite
-- [ ] Patrón Mediator
-- [ ] Patrón Memento
-- [ ] Patrón Template Method
-- [ ] Patrón Visitor
-- [ ] Serialización de clases
-- [ ] Clases y JSON
-- [ ] Validación de clases
-- [ ] Decoradores en clases
-- [ ] Decoradores en propiedades
-- [ ] Decoradores en métodos
-- [ ] Decoradores en parámetros
-- [ ] Uso moderno de decorators (TS 5.x)
-- [ ] Clases y metadata
-- [ ] Clases en Angular
-- [ ] Clases en NestJS
-- [ ] Clases en React (legacy)
-- [ ] Clases en Node.js
-- [ ] Tipado de new()
-- [ ] ConstructorParameters<T>
-- [ ] Tipos de instancias dinámicas
-- [ ] Factories dinámicos
-- [ ] Registro de clases dinámico
-- [ ] Anti-patterns en OOP con TS
-- [ ] Testeo de clases
-- [ ] Mocking de clases
-- [ ] Stubs de clases
-- [ ] Spies de clases
-- [ ] Dependencias de clases
-- [ ] Inyección de dependencias
-- [ ] Contenedores de DI tipados
-- [ ] Patrón inversify.js
-- [ ] Uso de tsyringe
-- [ ] Frameworks de DI con TS
-- [ ] Ejercicios de OOP en TS
-- [ ] Mini-proyecto: Sistema de usuarios OOP tipado
-
 ## 📘 Módulo 7: Manejo de Errores, Excepciones y Resultados Tipados
-
 > **Propósito:** Aprender a trabajar con errores de forma segura y predecible en TS.
-
-- [ ] Manejo de try/catch en TS
-- [ ] Tipado de Error básico
-- [ ] Tipado de Error custom
-- [ ] Extender la clase Error
-- [ ] Jerarquía de errores personalizada
-- [ ] instanceof en errores
-- [ ] Narrowing en errores
-- [ ] unknown para errores
-- [ ] Validación de tipo en errores
-- [ ] Uso de never en errores
-- [ ] Funciones que lanzan errores
-- [ ] Tipado de throw
-- [ ] Funciones que retornan never
-- [ ] Resultados tipados (Result<T,E>)
-- [ ] Resultados con union types
-- [ ] Resultados con discriminated unions
-- [ ] Ok y Err tipados
-- [ ] Patrones Option (Some/None)
-- [ ] Patrones Maybe
-- [ ] Uso de librerías como neverthrow
-- [ ] Validación con Either
-- [ ] Validación con ADTs
-- [ ] Manejo de errores async
-- [ ] Errores en promesas
-- [ ] Errores en async/await
-- [ ] Uso de Promise<Result<T,E>>
-- [ ] Retornos con tryCatch helpers
-- [ ] Funciones safeCall tipadas
-- [ ] Validación de errores en callbacks
-- [ ] Errores tipados en API calls
-- [ ] Errores de red tipados
-- [ ] Errores de parseo tipados
-- [ ] Errores de validación tipados
-- [ ] Errores de negocio tipados
-- [ ] Errores en dominios específicos
-- [ ] Errores en GraphQL
-- [ ] Errores en REST APIs
-- [ ] Errores en WebSockets
-- [ ] Errores en gRPC
-- [ ] Errores en colas de mensajes
-- [ ] Errores en DB queries
-- [ ] Errores de conexión
-- [ ] Errores de autenticación
-- [ ] Errores de autorización
-- [ ] Errores de permisos
-- [ ] Errores de sesión
-- [ ] Errores de cache
-- [ ] Errores de concurrencia
-- [ ] Errores de sincronización
-- [ ] Errores en workers
-- [ ] Errores de compilación
-- [ ] Errores de validación de tipos
-- [ ] Errores de tipado con as
-- [ ] Errores de narrowing fallido
-- [ ] Errores en librerías externas
-- [ ] Errores en runtime
-- [ ] Errores en frameworks
-- [ ] Manejo centralizado de errores
-- [ ] Middlewares de error
-- [ ] Decoradores para errores
-- [ ] Errores con logging tipado
-- [ ] Logging estructurado
-- [ ] Logging con contextos
-- [ ] Integración con Sentry
-- [ ] Integración con Datadog
-- [ ] Integración con NewRelic
-- [ ] Alertas tipadas
-- [ ] Monitoreo de errores
-- [ ] Retriable errors
-- [ ] Backoff tipado
-- [ ] Circuit breaker tipado
-- [ ] Failover tipado
-- [ ] Estrategias de resiliencia
-- [ ] Manejo de errores en microservicios
-- [ ] Errores distribuidos
-- [ ] Correlation IDs tipados
-- [ ] Context propagation
-- [ ] Retries automáticos tipados
-- [ ] Validación de errores en tests
-- [ ] Tests de Result<T,E>
-- [ ] Tests de Option
-- [ ] Tests de funciones fallidas
-- [ ] Tests de librerías con errores
-- [ ] Mocking de errores
-- [ ] Simulación de errores
-- [ ] Anti-patterns en errores
-- [ ] Uso excesivo de try/catch
-- [ ] Uso excesivo de any en errores
-- [ ] No tipar errores correctamente
-- [ ] Errores silenciosos
-- [ ] Errores sin logs
-- [ ] Errores sin contexto
-- [ ] Errores sin métricas
-- [ ] Errores no reproducibles
-- [ ] Errores en producción
-- [ ] Postmortem con tipos
-- [ ] Estrategias de hotfix
-- [ ] Reintentos tipados
-- [ ] Ejercicios de manejo de errores
-- [ ] Mini-proyecto: Sistema de Result<T,E> para API
-
 ## 📘 Módulo 8: Promesas, Asincronía y Concurrencia en TypeScript
-
 > **Propósito:** Trabajar con asincronía tipada, promesas y modelos de concurrencia modernos.
-
-- [ ] Tipado de funciones async
-- [ ] Retorno Promise<T>
-- [ ] Promesas resueltas
-- [ ] Promesas rechazadas
-- [ ] Tipado de Promise<void>
-- [ ] Tipado de Promise<never>
-- [ ] Encadenamiento con .then
-- [ ] Encadenamiento con .catch
-- [ ] Encadenamiento con .finally
-- [ ] Inferencia de tipos en .then
-- [ ] Inferencia de tipos en .catch
-- [ ] async/await con tipado
-- [ ] Inferencia de await
-- [ ] Funciones async genéricas
-- [ ] Funciones async con constraints
-- [ ] Funciones async que retornan Result<T,E>
-- [ ] Validación de errores en async
-- [ ] Narrowing en async
-- [ ] Tipado de Promise.all
-- [ ] Tipado de Promise.race
-- [ ] Tipado de Promise.any
-- [ ] Tipado de Promise.allSettled
-- [ ] Errores en Promise.all
-- [ ] Manejo de PromiseSettledResult
-- [ ] Iteradores async (for await...of)
-- [ ] Generadores async (async function*)
-- [ ] Uso de AsyncIterable
-- [ ] Uso de AsyncIterator
-- [ ] Streams tipados en Node
-- [ ] Streams tipados en Web
-- [ ] Workers en Node.js
-- [ ] Web Workers en Browser
-- [ ] Service Workers tipados
-- [ ] Shared Workers
-- [ ] MessageChannel tipado
-- [ ] Mensajes con tipos estrictos
-- [ ] Transferables tipados
-- [ ] BroadcastChannel tipado
-- [ ] API EventTarget tipada
-- [ ] Tipado de listeners
-- [ ] Tipado de handlers
-- [ ] EventEmitter tipado
-- [ ] Observables vs Promises
-- [ ] RxJS tipado básico
-- [ ] RxJS operadores tipados
-- [ ] RxJS subjects tipados
-- [ ] Tipado de from, of, merge
-- [ ] Tipado de pipe
-- [ ] Tipado de map, filter, scan
-- [ ] Streams async + RxJS
-- [ ] Concurrencia con workers
-- [ ] Concurrencia con cluster
-- [ ] Concurrencia con threads (Node worker_threads)
-- [ ] Concurrencia con Atomics
-- [ ] Concurrencia con SharedArrayBuffer
-- [ ] Locks tipados
-- [ ] Mutex tipado
-- [ ] Semáforo tipado
-- [ ] Colas tipadas
-- [ ] Productor/consumidor tipado
-- [ ] Errores en concurrencia
-- [ ] Deadlocks tipados
-- [ ] Race conditions tipadas
-- [ ] Estrategias anti-deadlock
-- [ ] Estrategias anti-race condition
-- [ ] Backpressure tipado
-- [ ] Estrategias de retry en async
-- [ ] Backoff exponencial tipado
-- [ ] Throttling tipado
-- [ ] Debounce tipado
-- [ ] Timeouts en promesas
-- [ ] Cancelación de promesas
-- [ ] AbortController tipado
-- [ ] AbortSignal tipado
-- [ ] Task runners tipados
-- [ ] Job queues tipadas
-- [ ] Agenda job tipado
-- [ ] BullMQ tipado
-- [ ] Temporal.io tipado
-- [ ] Temporal workflows tipados
-- [ ] Retry policies tipadas
-- [ ] Circuit breaker tipado
-- [ ] Bulkhead tipado
-- [ ] Rate limiter tipado
-- [ ] Token bucket tipado
-- [ ] Sliding window tipado
-- [ ] Testeo de funciones async
-- [ ] Mocking de promesas
-- [ ] Fake timers tipados
-- [ ] Simulación de delays
-- [ ] Stress testing async
-- [ ] Anti-patterns de async
-- [ ] Uso excesivo de any en promesas
-- [ ] Promesas sin await
-- [ ] Promesas sin catch
-- [ ] Promesas huérfanas
-- [ ] Callbacks en código async
-- [ ] Migración de callbacks a async/await
-- [ ] Ejercicios de async y promesas
-- [ ] Mini-proyecto: Job scheduler tipado
-
 ## 📘 Módulo 9: Módulos, Imports, Exports y Gestión de Código
-
 > **Propósito:** Aprender a organizar proyectos con módulos, imports/exports y control de dependencias.
-
-- [ ] Introducción a módulos en TS
-- [ ] CommonJS vs ESM
-- [ ] import básico
-- [ ] export básico
-- [ ] export default
-- [ ] export {}
-- [ ] import * as
-- [ ] import { alias as x }
-- [ ] import type
-- [ ] export type
-- [ ] Importar JSON
-- [ ] Importar CSS/Assets (con bundler)
-- [ ] Configuración de module en tsconfig
-- [ ] Configuración de target
-- [ ] Configuración de moduleResolution
-- [ ] Node16 module resolution
-- [ ] NodeNext module resolution
-- [ ] BaseUrl en tsconfig
-- [ ] Paths en tsconfig
-- [ ] Aliases en imports
-- [ ] Estrategias de monorepo con TS
-- [ ] Imports relativos
-- [ ] Imports absolutos
-- [ ] Imports circulares
-- [ ] Detección de ciclos
-- [ ] Prevención de ciclos
-- [ ] Imports dinámicos (import())
-- [ ] Tipado de imports dinámicos
-- [ ] Code splitting con imports
-- [ ] Lazy loading con imports
-- [ ] Tree-shaking en bundlers
-- [ ] Side effects en imports
-- [ ] Package.json "type" field
-- [ ] "exports" en package.json
-- [ ] "imports" en package.json
-- [ ] "types" en package.json
-- [ ] typesVersions
-- [ ] Tipado de librerías externas
-- [ ] DefinitelyTyped y @types
-- [ ] Creación de index.ts
-- [ ] Barrel files
-- [ ] Pros y contras de barrel files
-- [ ] Estructura de carpetas en TS
-- [ ] Módulos de dominio
-- [ ] Módulos de infraestructura
-- [ ] Módulos de aplicación
-- [ ] Módulos compartidos
-- [ ] Módulos core
-- [ ] Módulos UI
-- [ ] Módulos API
-- [ ] Módulos test
-- [ ] Módulos config
-- [ ] Módulos utilidades
-- [ ] Namespaces (legacy)
-- [ ] Por qué evitar namespaces
-- [ ] Migración de namespaces a módulos
-- [ ] Modularización de librerías
-- [ ] Modularización de monorepos
-- [ ] Microfrontends con módulos
-- [ ] Microservicios con módulos
-- [ ] Carga condicional de módulos
-- [ ] Polyfills en módulos
-- [ ] Ambient modules (declare module)
-- [ ] Global augmentations
-- [ ] Extensión de librerías externas
-- [ ] declare global
-- [ ] declare namespace
-- [ ] Extender Window interface
-- [ ] Extender NodeJS namespace
-- [ ] Crear .d.ts manuales
-- [ ] Archivos de tipado para libs
-- [ ] Compatibilidad con JS puro
-- [ ] JSDoc para módulos
-- [ ] Estrategias de import en Deno
-- [ ] Estrategias de import en Bun
-- [ ] Estrategias de import en Node
-- [ ] Estrategias de import en Browser
-- [ ] Carga ESM en Browser
-- [ ] Carga CommonJS en Node
-- [ ] Interop entre CJS y ESM
-- [ ] Problemas de default import en CJS
-- [ ] Problemas de named import en CJS
-- [ ] Estrategias de compatibilidad
-- [ ] Testing de módulos
-- [ ] Mocking de imports
-- [ ] Mocking de exports
-- [ ] Reemplazo dinámico de imports
-- [ ] Hot module replacement (HMR)
-- [ ] Bundlers y TS (Vite, Webpack, esbuild)
-- [ ] Empaquetado de módulos TS
-- [ ] Publicación en npm
-- [ ] Tipado en publicación npm
-- [ ] Configuración de package exports
-- [ ] Compatibilidad multi-runtime
-- [ ] Estructura óptima de un lib TS
-- [ ] Anti-patterns en modularización
-- [ ] Imports masivos innecesarios
-- [ ] Exports no tipados
-- [ ] Ejercicios de imports/exports
-- [ ] Mini-proyecto: Estructura modular de librería TS
-
 ## 📘 Módulo 10: Environments, Tooling y Configuración de Proyecto en TypeScript
-
 > **Propósito:** Aprender a configurar entornos profesionales para proyectos TypeScript, optimizando DX (developer experience).
-
-- [ ] Inicialización de proyecto con npm init
-- [ ] Creación de proyecto con pnpm init
-- [ ] Inicialización con yarn init
-- [ ] Configuración inicial de tsconfig.json
-- [ ] rootDir y outDir
-- [ ] target y compatibilidad de versiones
-- [ ] Configuración de lib (ESNext, DOM)
-- [ ] module y compatibilidad ESM/CJS
-- [ ] moduleResolution NodeNext
-- [ ] esModuleInterop
-- [ ] allowSyntheticDefaultImports
-- [ ] strict mode
-- [ ] noImplicitAny
-- [ ] noUnusedLocals
-- [ ] noUnusedParameters
-- [ ] exactOptionalPropertyTypes
-- [ ] isolatedModules
-- [ ] isolatedDeclarations
-- [ ] skipLibCheck
-- [ ] forceConsistentCasingInFileNames
-- [ ] types en tsconfig
-- [ ] include y exclude
-- [ ] files en tsconfig
-- [ ] Compilación incremental
-- [ ] Project references
-- [ ] composite projects
-- [ ] Build mode (tsc -b)
-- [ ] Uso de --watch
-- [ ] Performance de tsc --watch (TS 5.5+)
-- [ ] --noCheck (TS 5.6+)
-- [ ] Source maps para debugging
-- [ ] Inline source maps
-- [ ] Inline sources
-- [ ] Depuración en VS Code
-- [ ] Depuración en WebStorm
-- [ ] ts-node
-- [ ] tsx runtime
-- [ ] Configuración de Jest + TS
-- [ ] Configuración de Vitest + TS
-- [ ] Configuración de Playwright + TS
-- [ ] Configuración de Cypress + TS
-- [ ] Configuración de ESLint + TS
-- [ ] Parser @typescript-eslint/parser
-- [ ] Reglas recomendadas para TS
-- [ ] Plugins útiles para ESLint con TS
-- [ ] Integración con Prettier
-- [ ] Prettier ignore + TS
-- [ ] Husky hooks para lint-staged
-- [ ] CI/CD con GitHub Actions
-- [ ] CI/CD con GitLab
-- [ ] CI/CD con CircleCI
-- [ ] CI/CD con Azure Pipelines
-- [ ] CI/CD con Jenkins
-- [ ] Publicación en npm
-- [ ] Empaquetado con tsup
-- [ ] Empaquetado con esbuild
-- [ ] Empaquetado con Rollup
-- [ ] Empaquetado con Webpack
-- [ ] Empaquetado con Vite
-- [ ] Configuración multi-entrada
-- [ ] Configuración de bundles duales (CJS/ESM)
-- [ ] typesVersions en package.json
-- [ ] Tipado en publicación npm
-- [ ] Configuración de monorepo con pnpm
-- [ ] Configuración de monorepo con Nx
-- [ ] Configuración de monorepo con Turborepo
-- [ ] Separación de paquetes internos
-- [ ] Estrategia de repos multi-package
-- [ ] Testing de builds
-- [ ] Publicación con changesets
-- [ ] Versionado semántico (SemVer)
-- [ ] Release notes automáticos
-- [ ] Uso de commitlint
-- [ ] Conventional commits
-- [ ] Changelogs generados
-- [ ] Estrategias de branching (gitflow)
-- [ ] Estrategias trunk-based
-- [ ] PRs y chequeo de tipos en CI
-- [ ] Auditoría de dependencias
-- [ ] Dependabot + TS
-- [ ] Renovate + TS
-- [ ] Estrategias de lockfile
-- [ ] Seguridad en dependencias
-- [ ] Firma de commits
-- [ ] Firma de paquetes npm
-- [ ] Private registries
-- [ ] Verdaccio con TS
-- [ ] Nexus con TS
-- [ ] Artifactory con TS
-- [ ] Estructura recomendada de proyecto
-- [ ] Carpeta src
-- [ ] Carpeta tests
-- [ ] Carpeta types
-- [ ] Carpeta config
-- [ ] Carpeta scripts
-- [ ] Convenciones de nombres en carpetas
-- [ ] Monorepos vs polyrepos
-- [ ] Anti-patterns en configuración
-- [ ] Ejercicios de tooling
-- [ ] Mini-proyecto: Starter kit TypeScript pro
-
 ## 📘 Módulo 11: Genéricos Avanzados y Metaprogramación de Tipos
-
 > **Propósito:** Elevar el nivel en generics con constraints complejas, `infer` avanzados y utilidades de metaprogramación.
-
-- [ ] Genéricos con múltiples parámetros
-- [ ] Genéricos dependientes (<T,U extends keyof T>)
-- [ ] Genéricos condicionales
-- [ ] Genéricos con default values
-- [ ] Genéricos con infer en funciones
-- [ ] Genéricos con infer en tipos condicionales
-- [ ] Inferencia avanzada con tuplas
-- [ ] Inferencia avanzada con arrays
-- [ ] Inferencia avanzada con objetos
-- [ ] Inferencia avanzada en promesas
-- [ ] Inferencia avanzada en funciones
-- [ ] Patrones de extractor con infer
-- [ ] Tipado de ReturnType<T>
-- [ ] Tipado de Parameters<T>
-- [ ] Tipado de ConstructorParameters<T>
-- [ ] Tipado de ThisParameterType<T>
-- [ ] Tipado de OmitThisParameter<T>
-- [ ] Tipado de InstanceType<T>
-- [ ] Tipado de Awaited<T>
-- [ ] Tipado de NonNullable<T>
-- [ ] Tipado de Uppercase<T>
-- [ ] Tipado de Lowercase<T>
-- [ ] Tipado de Capitalize<T>
-- [ ] Tipado de Uncapitalize<T>
-- [ ] Extract<T,U>
-- [ ] Exclude<T,U>
-- [ ] Partial<T>
-- [ ] Required<T>
-- [ ] Readonly<T>
-- [ ] Pick<T,K>
-- [ ] Omit<T,K>
-- [ ] Record<K,V>
-- [ ] DeepPartial
-- [ ] DeepReadonly
-- [ ] DeepRequired
-- [ ] DeepNonNullable
-- [ ] Flatten
-- [ ] UnionToIntersection
-- [ ] TupleToUnion
-- [ ] UnionToTuple
-- [ ] First
-- [ ] Last
-- [ ] Pop
-- [ ] Shift
-- [ ] Reverse
-- [ ] Zip<T,U>
-- [ ] Unzip
-- [ ] Merge<T,U>
-- [ ] Overwrite<T,U>
-- [ ] Compute (simplificación de tipos)
-- [ ] Narrow
-- [ ] Brand<T,Name>
-- [ ] Opaque<T,Name>
-- [ ] Tag<T,TagName>
-- [ ] Phantom types
-- [ ] Const generics (simulados)
-- [ ] Emulación de template metaprogramming
-- [ ] Patrones de curry tipado
-- [ ] Patrones de compose tipado
-- [ ] Patrones de pipe tipado
-- [ ] Funciones utilitarias FP tipadas
-- [ ] Parser de strings con tipos
-- [ ] Split<T,Separator>
-- [ ] Join<T,Separator>
-- [ ] Replace<T,Search,Replace>
-- [ ] Trim
-- [ ] StartsWith<T,Prefix>
-- [ ] EndsWith<T,Suffix>
-- [ ] Includes<T,Sub>
-- [ ] Length
-- [ ] Range
-- [ ] NumericString
-- [ ] ValidateEmail
-- [ ] ValidateURL
-- [ ] ValidateDate
-- [ ] ValidateJSON
-- [ ] InferKeys
-- [ ] InferValues
-- [ ] InferReturnType
-- [ ] InferParameters
-- [ ] Patrones de branded IDs
-- [ ] Patrones de domain-specific types
-- [ ] Patrones de discriminated unions
-- [ ] Patrones de exhaustive checks
-- [ ] Patrones de type-safe builders
-- [ ] Patrones de type-safe factories
-- [ ] Patrones de type-safe configs
-- [ ] Patrones de type-safe schemas
-- [ ] Patrones de type-safe routes
-- [ ] Patrones de type-safe queries
-- [ ] Patrones de type-safe forms
-- [ ] Patrones de type-safe validation
-- [ ] Patrones de type-safe events
-- [ ] Patrones de type-safe logging
-- [ ] Anti-patterns en generics
-- [ ] Limitaciones del sistema de tipos
-- [ ] Errores comunes con generics
-- [ ] Ejercicios de generics avanzados
-- [ ] Retos de metaprogramación de tipos
-- [ ] Mini-proyecto: Librería de utilidades de tipo
-
 ## 📘 Módulo 12: Decorators, Metadata y Reflect en TypeScript
-
 > **Propósito:** Aprender y dominar los decoradores modernos de TS (5.x), metadata y su uso en frameworks.
-
-- [ ] Introducción a decorators
-- [ ] Estado actual en TS 5.x
-- [ ] Legacy decorators vs modern decorators
-- [ ] Decorators de clase
-- [ ] Decorators de propiedad
-- [ ] Decorators de método
-- [ ] Decorators de parámetro
-- [ ] Contexto en decorators
-- [ ] value y context en decoradores modernos
-- [ ] Uso de reflect-metadata
-- [ ] Añadir metadata a clases
-- [ ] Leer metadata de clases
-- [ ] Decorators para validación
-- [ ] Decorators para logging
-- [ ] Decorators para seguridad
-- [ ] Decorators para caching
-- [ ] Decorators para inyección de dependencias
-- [ ] Decorators para factories
-- [ ] Decorators para eventos
-- [ ] Decorators para performance
-- [ ] Decorators en Angular
-- [ ] Decorators en NestJS
-- [ ] Decorators en TypeORM
-- [ ] Decorators en Prisma (workaround)
-- [ ] Decorators en librerías UI
-- [ ] Decorators para roles y permisos
-- [ ] Decorators para endpoints
-- [ ] Decorators para middlewares
-- [ ] Decorators para DTOs
-- [ ] Decorators para servicios
-- [ ] Decorators para controladores
-- [ ] Decorators para entidades
-- [ ] Decorators para repositorios
-- [ ] Decorators para casos de uso
-- [ ] Decorators para handlers
-- [ ] Decorators para pipelines
-- [ ] Decorators para workers
-- [ ] Decorators para cron jobs
-- [ ] Decorators para colas
-- [ ] Decorators para mensajería
-- [ ] Decorators para websockets
-- [ ] Decorators para GraphQL
-- [ ] Decorators para gRPC
-- [ ] Decorators para REST
-- [ ] Decorators para auth
-- [ ] Decorators para sesiones
-- [ ] Decorators para auditoría
-- [ ] Decorators para logs
-- [ ] Decorators para métricas
-- [ ] Decorators para tracing
-- [ ] Decorators para observabilidad
-- [ ] Decorators para testing
-- [ ] Decorators para mocks
-- [ ] Decorators para spies
-- [ ] Decorators para stubs
-- [ ] Decorators para coverage
-- [ ] Decorators para retries
-- [ ] Decorators para circuit breakers
-- [ ] Decorators para rate limiting
-- [ ] Decorators para feature flags
-- [ ] Decorators para experiments
-- [ ] Decorators para AB testing
-- [ ] Decorators para seguridad avanzada
-- [ ] Decorators para validación de schema
-- [ ] Decorators para validación de tipos
-- [ ] Decorators para validación de datos
-- [ ] Decorators para validación de entrada
-- [ ] Decorators para validación de salida
-- [ ] Decorators para contratos
-- [ ] Decorators para integridad
-- [ ] Decorators para resiliencia
-- [ ] Decorators para fallback
-- [ ] Decorators para error handling
-- [ ] Decorators para error logging
-- [ ] Decorators para retry policies
-- [ ] Decorators para observadores
-- [ ] Decorators para inmutabilidad
-- [ ] Decorators para deep freeze
-- [ ] Decorators para deep clone
-- [ ] Decorators para factories dinámicas
-- [ ] Decorators para builders
-- [ ] Decorators para proxies
-- [ ] Decorators para adapters
-- [ ] Decorators para facades
-- [ ] Decorators para strategies
-- [ ] Decorators para commands
-- [ ] Decorators para state machines
-- [ ] Decorators para eventos de dominio
-- [ ] Decorators para CQRS
-- [ ] Decorators para DDD
-- [ ] Anti-patterns en decorators
-- [ ] Riesgos de decorators legacy
-- [ ] Errores comunes en decorators
-- [ ] Metadata pollution
-- [ ] Metadata leakage
-- [ ] Seguridad en metadata
-- [ ] Testing de decorators
-- [ ] Ejercicios de creación de decorators
-- [ ] Ejercicios de metadata
-- [ ] Mini-proyecto: Framework de decorators para API
-
 ## 📘 Módulo 13: Sistema de Feedback y Aprendizaje Autónomo en Proyectos con TS
-
 > **Propósito:** Diseñar proyectos en TypeScript que integren feedback, validación y auto-mejora continua.
-
-- [ ] Concepto de feedback loops en software
-- [ ] Feedback interno (tipado) vs externo (usuarios)
-- [ ] Contratos estrictos con strict
-- [ ] Validación de inputs con Zod
-- [ ] Validación de inputs con io-ts
-- [ ] Validación de inputs con typia
-- [ ] Validación de outputs con schemas
-- [ ] Guardado de resultados en logs
-- [ ] Logging estructurado tipado
-- [ ] Estrategia de audit trail
-- [ ] Feedback en tiempo de compilación
-- [ ] Errores de narrowing como feedback
-- [ ] Uso de never como validación
-- [ ] Feedback en tiempo de ejecución
-- [ ] Validación runtime vs compile time
-- [ ] Monitoreo de errores en producción
-- [ ] Uso de Sentry con TS
-- [ ] Uso de Datadog con TS
-- [ ] Uso de NewRelic con TS
-- [ ] Integración de métricas tipadas
-- [ ] Monitoreo de APIs tipadas
-- [ ] Feedback en pruebas unitarias
-- [ ] Feedback en pruebas de integración
-- [ ] Feedback en pruebas E2E
-- [ ] Reportes automáticos de cobertura
-- [ ] Reportes de tipos faltantes
-- [ ] tsc --noEmitOnError
-- [ ] tsc --pretty para mejor DX
-- [ ] Uso de ts-prune para feedback
-- [ ] Uso de ts-unused-exports
-- [ ] Generación de changelogs automáticos
-- [ ] Versionado con changesets
-- [ ] CI con chequeo de tipos
-- [ ] CI con chequeo de lint
-- [ ] CI con chequeo de tests
-- [ ] Feedback en PRs con bots
-- [ ] GitHub Actions para TS
-- [ ] GitLab pipelines para TS
-- [ ] CircleCI pipelines para TS
-- [ ] Azure Pipelines para TS
-- [ ] Alertas de calidad de código
-- [ ] SonarQube con TS
-- [ ] ESLint feedback en CI
-- [ ] Prettier feedback en CI
-- [ ] Pre-commit hooks para feedback
-- [ ] Husky + lint-staged
-- [ ] Validación de commits con commitlint
-- [ ] Feedback en dependencias (npm audit)
-- [ ] Renovate bot feedback
-- [ ] Dependabot feedback
-- [ ] Seguridad feedback loop
-- [ ] Scanners de vulnerabilidades
-- [ ] Análisis estático de código
-- [ ] Análisis dinámico de código
-- [ ] Reportes de performance
-- [ ] Lighthouse con TS frontends
-- [ ] Web Vitals tipados
-- [ ] Benchmarks con autocannon
-- [ ] Benchmarks con k6
-- [ ] Feedback de usuarios en tiempo real
-- [ ] Telemetría tipada en frontends
-- [ ] Telemetría tipada en backends
-- [ ] Feature flags con feedback
-- [ ] AB testing con feedback
-- [ ] Experimentos controlados tipados
-- [ ] Mejora continua en APIs
-- [ ] Mejora continua en frontends
-- [ ] Mejora continua en librerías
-- [ ] Refactor con feedback loops
-- [ ] Refactor continuo en tipos
-- [ ] Tech debt tracking
-- [ ] Feedback en revisiones de código
-- [ ] Pair programming con feedback
-- [ ] Uso de GitHub Copilot con TS
-- [ ] Uso de ChatGPT con TS
-- [ ] Feedback humano + AI
-- [ ] Feedback en documentación
-- [ ] Generación automática de docs
-- [ ] Validación de docs con TSDoc
-- [ ] Docs como contrato de feedback
-- [ ] Postmortems tipados
-- [ ] RCA (root cause analysis) con TS
-- [ ] Checklists de calidad
-- [ ] Métricas de bugs por release
-- [ ] Métricas de tiempo de build
-- [ ] Métricas de coverage
-- [ ] Métricas de dependencias
-- [ ] Métricas de tipos usados
-- [ ] Reportes automáticos de DX
-- [ ] Evaluación de experiencia dev
-- [ ] Evaluación de satisfacción usuario
-- [ ] KPIs de calidad en TS
-- [ ] Anti-patterns en feedback
-- [ ] Falta de validación tipada
-- [ ] Falta de logs tipados
-- [ ] Falta de telemetría tipada
-- [ ] Feedback ignorado en CI/CD
-- [ ] Ejercicios de feedback loops
-- [ ] Ejercicios de validación auto-mejorable
-- [ ] Mini-proyecto: Sistema de feedback continuo en TS
-
 ## 📘 Módulo 14: Motor de Razonamiento Multicapa en TypeScript
-
 > **Propósito:** Modelar arquitecturas y algoritmos complejos en TS con múltiples capas de razonamiento.
-
-- [ ] Concepto de reasoning engine
-- [ ] Representación de conocimiento en TS
-- [ ] Objetos de dominio estrictamente tipados
-- [ ] Value objects para reasoning
-- [ ] Entities para reasoning
-- [ ] Graph models tipados
-- [ ] Árboles tipados
-- [ ] ASTs en TS
-- [ ] JSON Schema reasoning
-- [ ] Validación de constraints complejas
-- [ ] Patrones de inferencia tipados
-- [ ] Inferencia booleana
-- [ ] Inferencia numérica
-- [ ] Inferencia de strings
-- [ ] Inferencia de tuplas
-- [ ] Inferencia de arrays
-- [ ] Inferencia de objetos
-- [ ] Reglas tipadas con condicionales
-- [ ] Narrowing avanzado en reasoning
-- [ ] Exhaustividad como razonamiento
-- [ ] Operadores lógicos tipados
-- [ ] Tablas de verdad en tipos
-- [ ] Representación de proposiciones
-- [ ] Motor de reglas tipado
-- [ ] Rule engines con TS
-- [ ] DSLs tipados
-- [ ] Compiladores de reglas en TS
-- [ ] Patrones declarativos con TS
-- [ ] Declaración de invariantes
-- [ ] Reasoning con ADTs
-- [ ] Reasoning con discriminated unions
-- [ ] Reasoning con Opaque types
-- [ ] Reasoning con Branded types
-- [ ] Reasoning en GraphQL schemas
-- [ ] Reasoning en REST schemas
-- [ ] Reasoning en Zod schemas
-- [ ] Reasoning en io-ts schemas
-- [ ] Reasoning en typia schemas
-- [ ] Patrones de constraints combinadas
-- [ ] Múltiples capas de validación
-- [ ] Capas de dominio
-- [ ] Capas de aplicación
-- [ ] Capas de infraestructura
-- [ ] Capas de interfaz
-- [ ] Pipelines tipados multicapa
-- [ ] Middlewares multicapa
-- [ ] Handlers multicapa
-- [ ] Reasoning distribuido
-- [ ] Reasoning en microservicios
-- [ ] Reasoning en frontends
-- [ ] Reasoning en backends
-- [ ] Reasoning en librerías
-- [ ] Algoritmos de búsqueda tipados
-- [ ] Algoritmos de grafos tipados
-- [ ] Algoritmos de optimización tipados
-- [ ] Algoritmos de pathfinding tipados
-- [ ] Algoritmos de DP tipados
-- [ ] Algoritmos de parsing tipados
-- [ ] Motores de inferencia tipados
-- [ ] Motores de validación tipados
-- [ ] Evaluación de expresiones
-- [ ] Evaluación de condiciones
-- [ ] Evaluación de queries
-- [ ] Evaluación de permisos
-- [ ] Evaluación de roles
-- [ ] Evaluación de políticas
-- [ ] Evaluación de reglas de negocio
-- [ ] Evaluación de workflows
-- [ ] Evaluación de feature flags
-- [ ] Evaluación de experimentos
-- [ ] Reasoning sobre métricas
-- [ ] Reasoning sobre logs
-- [ ] Reasoning sobre tracing
-- [ ] Reasoning sobre errores
-- [ ] Reasoning sobre eventos
-- [ ] Reasoning sobre streams
-- [ ] Reasoning sobre estados
-- [ ] Reasoning sobre CQRS
-- [ ] Reasoning sobre DDD
-- [ ] Reasoning sobre domain events
-- [ ] AI reasoning simulados en TS
-- [ ] Motores de reglas para AI
-- [ ] Reasoning con machine learning APIs
-- [ ] Reasoning con LLMs y TS
-- [ ] Razonamiento híbrido humano+AI
-- [ ] Razonamiento colaborativo
-- [ ] Evaluación multicriterio
-- [ ] Evaluación fuzzy logic
-- [ ] Evaluación probabilística
-- [ ] Evaluación bayesiana
-- [ ] Anti-patterns en reasoning
-- [ ] Reglas hardcoded
-- [ ] Falta de exhaustividad
-- [ ] Falta de tipado en reglas
-- [ ] Reasoning mal distribuido
-- [ ] Ejercicios de motores multicapa
-- [ ] Ejercicios de constraints tipadas
-- [ ] Ejercicios de reasoning engine
-- [ ] Ejercicios de validación multicapa
-- [ ] Mini-proyecto: Motor de reasoning multicapa tipado
-
 ## 📘 Módulo 15: Gestión del Tono, Estilo y Contexto Cultural en Proyectos con TS
-
 > **Propósito:** Aplicar TypeScript en el desarrollo de sistemas con sensibilidad cultural, internacionalización y estilo adaptable.
-
-- [ ] Concepto de tono y estilo en software
-- [ ] Contexto cultural en UIs
-- [ ] Tipado de mensajes i18n
-- [ ] Tipado de keys de traducción
-- [ ] Generación de tipos desde archivos JSON
-- [ ] Generación de tipos desde YAML
-- [ ] Validación de keys de traducción
-- [ ] Validación de pluralización
-- [ ] Tipado de mensajes dinámicos
-- [ ] Tipado de interpolaciones
-- [ ] Tipado de placeholders
-- [ ] Tipado de formatos de fecha
-- [ ] Tipado de formatos de número
-- [ ] Tipado de monedas
-- [ ] Tipado de porcentajes
-- [ ] Tipado de unidades
-- [ ] Tipado de horarios
-- [ ] Tipado de zonas horarias
-- [ ] Tipado de calendarios
-- [ ] Tipado de símbolos culturales
-- [ ] Tipado de emojis
-- [ ] Tipado de alfabetos
-- [ ] Tipado de alfabetos extendidos
-- [ ] Tipado de scripts no latinos
-- [ ] Validación de idiomas soportados
-- [ ] Tipado de códigos de idioma
-- [ ] Tipado de códigos de región
-- [ ] Tipado de localizaciones
-- [ ] Tipado de banderas
-- [ ] Tipado de formatos RFC
-- [ ] Estrategias de i18n con TS
-- [ ] Estrategias de l10n con TS
-- [ ] Estrategias de g11n con TS
-- [ ] Frameworks de i18n tipados
-- [ ] i18next con TS
-- [ ] LinguiJS con TS
-- [ ] FormatJS con TS
-- [ ] Polyglot.js con TS
-- [ ] Next.js i18n con TS
-- [ ] React Intl con TS
-- [ ] Vue i18n con TS
-- [ ] Angular i18n con TS
-- [ ] Svelte i18n con TS
-- [ ] Validación cultural en formularios
-- [ ] Validación cultural en nombres
-- [ ] Validación cultural en direcciones
-- [ ] Validación cultural en teléfonos
-- [ ] Validación cultural en correos
-- [ ] Validación cultural en monedas
-- [ ] Validación cultural en horarios
-- [ ] Accesibilidad cultural (a11y)
-- [ ] Patrones de UI sensibles al contexto
-- [ ] Dark mode y cultura
-- [ ] Iconografía adaptable
-- [ ] Colores sensibles a cultura
-- [ ] Metáforas visuales en distintas culturas
-- [ ] UX writing sensible a cultura
-- [ ] Tonos de voz configurables
-- [ ] Estilos de comunicación formales
-- [ ] Estilos de comunicación informales
-- [ ] Estilos de comunicación neutrales
-- [ ] Generación de mensajes con templates
-- [ ] Generación de mensajes con literales
-- [ ] Generación de mensajes con funciones
-- [ ] Generación de mensajes con factories
-- [ ] Generación de mensajes con builders
-- [ ] Personalización por región
-- [ ] Personalización por idioma
-- [ ] Personalización por rol
-- [ ] Personalización por contexto
-- [ ] Feature flags culturales
-- [ ] Experimentos AB culturales
-- [ ] Localización de rutas
-- [ ] Localización de APIs
-- [ ] Localización de logs
-- [ ] Localización de métricas
-- [ ] Localización de tracing
-- [ ] Localización de errores
-- [ ] Localización de reportes
-- [ ] Localización de notificaciones
-- [ ] Testing de i18n con TS
-- [ ] Mocking de traducciones
-- [ ] Mocking de formatos
-- [ ] Testing cultural de formularios
-- [ ] Testing cultural de APIs
-- [ ] Testing cultural de logs
-- [ ] Testing cultural de métricas
-- [ ] Anti-patterns en i18n
-- [ ] Hardcodeo de strings
-- [ ] Falta de validación en traducciones
-- [ ] Traducciones duplicadas
-- [ ] Traducciones obsoletas
-- [ ] Estilos inconsistentes
-- [ ] Tonos inadecuados
-- [ ] Falta de accesibilidad
-- [ ] Ejercicios de i18n tipado
-- [ ] Ejercicios de l10n tipado
-- [ ] Ejercicios de estilo adaptable
-- [ ] Ejercicios de tono configurable
-- [ ] Mini-proyecto: Sistema i18n tipado para app global
-
 ## 📘 Módulo 16: Testing Avanzado en TypeScript
-
 > **Propósito:** Dominar las herramientas y patrones de pruebas unitarias, integración y E2E con tipado seguro en TS.
-
-- [ ] Introducción al testing en TS
-- [ ] Tipado de asserts
-- [ ] Tipado de mocks
-- [ ] Tipado de stubs
-- [ ] Tipado de spies
-- [ ] Tipado de fakes
-- [ ] Unit testing con Jest
-- [ ] Configuración de Jest + TS
-- [ ] Unit testing con Vitest
-- [ ] Configuración de Vitest + TS
-- [ ] Unit testing con Mocha + Chai
-- [ ] Configuración de Mocha + TS
-- [ ] Unit testing con Ava
-- [ ] Unit testing con uvu
-- [ ] Testeando funciones tipadas
-- [ ] Testeando funciones genéricas
-- [ ] Testeando funciones async
-- [ ] Testeando promesas
-- [ ] Testeando callbacks
-- [ ] Testeando factories
-- [ ] Testeando clases
-- [ ] Testeando métodos sobrecargados
-- [ ] Testeando métodos async
-- [ ] Testeando decoradores
-- [ ] Testeando DTOs tipados
-- [ ] Testeando repositorios
-- [ ] Testeando servicios
-- [ ] Testeando controladores
-- [ ] Testeando middlewares
-- [ ] Testeando pipelines
-- [ ] Testeando eventos
-- [ ] Testeando websockets
-- [ ] Testeando GraphQL
-- [ ] Testeando REST APIs
-- [ ] Testeando gRPC
-- [ ] Testeando colas de mensajes
-- [ ] Testeando workers
-- [ ] Testeando cron jobs
-- [ ] Testeando streams
-- [ ] Testeando observables
-- [ ] Snapshot testing con Jest
-- [ ] Snapshot testing con Vitest
-- [ ] Mocking con jest.mock
-- [ ] Mocking con vi.mock
-- [ ] Mocking dinámico con proxy
-- [ ] Mocking de dependencias externas
-- [ ] Mocking de DBs
-- [ ] Mocking de APIs
-- [ ] Mocking de librerías de terceros
-- [ ] Uso de ts-mockito
-- [ ] Uso de typemoq
-- [ ] Uso de sinon
-- [ ] Mocks parciales
-- [ ] Mocks deep
-- [ ] Mocks strict
-- [ ] Stubs con retorno controlado
-- [ ] Stubs async
-- [ ] Stubs para funciones genéricas
-- [ ] Stubs para clases
-- [ ] Spies para funciones
-- [ ] Spies para clases
-- [ ] Spies para métodos async
-- [ ] Validación de llamadas
-- [ ] Validación de argumentos
-- [ ] Validación de tiempos
-- [ ] Fake timers en Jest
-- [ ] Fake timers en Vitest
-- [ ] Fake timers en Sinon
-- [ ] E2E testing con Playwright
-- [ ] E2E testing con Cypress
-- [ ] E2E testing con Puppeteer
-- [ ] E2E testing con WebdriverIO
-- [ ] Integración TS en Cypress
-- [ ] Integración TS en Playwright
-- [ ] Integración TS en Puppeteer
-- [ ] Testing de UI con React Testing Library
-- [ ] Testing de UI con Enzyme (legacy)
-- [ ] Testing de UI con Vue Testing Library
-- [ ] Testing de UI con Angular Testing
-- [ ] Testing de UI con Svelte Testing Library
-- [ ] Testing de accesibilidad (a11y)
-- [ ] Testing de performance
-- [ ] Testing de seguridad
-- [ ] Testing de concurrencia
-- [ ] Testing de resiliencia
-- [ ] Testing de feature flags
-- [ ] Testing de AB testing
-- [ ] Testing de internacionalización
-- [ ] Testing de logging
-- [ ] Testing de métricas
-- [ ] Coverage en TS
-- [ ] Coverage con NYC
-- [ ] Coverage con c8
-- [ ] Coverage con Jest
-- [ ] Coverage con Vitest
-- [ ] Anti-patterns en testing
-- [ ] Tests frágiles
-- [ ] Tests lentos
-- [ ] Tests sin tipado
-- [ ] Mini-proyecto: Framework de pruebas tipado para API
-
 ## 📘 Módulo 17: Seguridad en TypeScript
-
 > **Propósito:** Aprender a aplicar buenas prácticas de seguridad en el código y los sistemas desarrollados con TS.
-
-- [ ] Introducción a seguridad en TS
-- [ ] Seguridad en tipado
-- [ ] Uso seguro de any
-- [ ] Uso seguro de unknown
-- [ ] Validación de datos de entrada
-- [ ] Validación de datos de salida
-- [ ] Sanitización de inputs
-- [ ] Sanitización de outputs
-- [ ] Escapado de HTML
-- [ ] Escapado de SQL
-- [ ] Escapado de comandos
-- [ ] Validación de URLs
-- [ ] Validación de emails
-- [ ] Validación de contraseñas
-- [ ] Hashing con bcrypt
-- [ ] Hashing con argon2
-- [ ] Hashing con scrypt
-- [ ] Hashing con crypto nativo
-- [ ] Cifrado simétrico
-- [ ] Cifrado asimétrico
-- [ ] Cifrado híbrido
-- [ ] Firmas digitales
-- [ ] Certificados digitales
-- [ ] TLS/SSL con TS
-- [ ] Seguridad en WebSockets
-- [ ] Seguridad en gRPC
-- [ ] Seguridad en GraphQL
-- [ ] Seguridad en REST APIs
-- [ ] Seguridad en endpoints
-- [ ] Seguridad en queries
-- [ ] Seguridad en mutaciones
-- [ ] Seguridad en headers
-- [ ] Seguridad en cookies
-- [ ] Seguridad en sessions
-- [ ] Seguridad en JWT
-- [ ] Seguridad en OAuth2
-- [ ] Seguridad en OIDC
-- [ ] Seguridad en SAML
-- [ ] Seguridad en CSRF
-- [ ] Seguridad en XSS
-- [ ] Seguridad en SQL Injection
-- [ ] Seguridad en Command Injection
-- [ ] Seguridad en Path Traversal
-- [ ] Seguridad en Directory Listing
-- [ ] Seguridad en SSRF
-- [ ] Seguridad en RCE
-- [ ] Seguridad en LFI/RFI
-- [ ] Seguridad en DoS
-- [ ] Seguridad en DDos
-- [ ] Seguridad en Bruteforce
-- [ ] Rate limiting
-- [ ] IP blocking
-- [ ] Geo blocking
-- [ ] Device fingerprinting
-- [ ] MFA tipado
-- [ ] TOTP tipado
-- [ ] WebAuthn con TS
-- [ ] Passkeys con TS
-- [ ] Seguridad en workers
-- [ ] Seguridad en workers distribuidos
-- [ ] Seguridad en colas
-- [ ] Seguridad en mensajería
-- [ ] Seguridad en eventos
-- [ ] Seguridad en streams
-- [ ] Seguridad en observables
-- [ ] Seguridad en GraphQL resolvers
-- [ ] Seguridad en ORMs (Prisma, Drizzle)
-- [ ] Seguridad en queries SQL raw
-- [ ] Seguridad en migraciones
-- [ ] Seguridad en validaciones de esquema
-- [ ] Seguridad en DTOs
-- [ ] Seguridad en configs
-- [ ] Seguridad en secrets
-- [ ] Uso de .env seguro
-- [ ] Hashing de configs sensibles
-- [ ] Vaults de secrets
-- [ ] HashiCorp Vault + TS
-- [ ] AWS KMS + TS
-- [ ] GCP KMS + TS
-- [ ] Azure Key Vault + TS
-- [ ] Logs seguros
-- [ ] Logs sin PII
-- [ ] Logs cifrados
-- [ ] Logs anonimizados
-- [ ] Audits en TS
-- [ ] Auditoría de APIs
-- [ ] Auditoría de DB
-- [ ] Auditoría de sesiones
-- [ ] Auditoría de permisos
-- [ ] Auditoría de roles
-- [ ] Anti-patterns en seguridad
-- [ ] Hardcodeo de secrets
-- [ ] Uso de any en validaciones
-- [ ] Validaciones débiles
-- [ ] Errores sin logs
-- [ ] Errores con PII expuesta
-- [ ] Falta de tests de seguridad
-- [ ] Ejercicios de validación segura
-- [ ] Ejercicios de seguridad en APIs
-- [ ] Mini-proyecto: API segura con TS
-
 ## 📘 Módulo 18: Integración de Librerías Externas y Ecosistema TypeScript
-
 > **Propósito:** Aprender a trabajar con librerías JS/TS externas, tiparlas y mantener integridad en proyectos.
-
-- [ ] Ecosistema npm en TS
-- [ ] Tipado de librerías JS puras
-- [ ] Instalación de @types/*
-- [ ] Uso de DefinitelyTyped
-- [ ] Tipado de librerías sin tipos
-- [ ] Creación de d.ts para librerías
-- [ ] Augmentations de módulos
-- [ ] declare module
-- [ ] declare global
-- [ ] Namespaces augmentations
-- [ ] Extender Window
-- [ ] Extender NodeJS
-- [ ] Extender Express
-- [ ] Extender React
-- [ ] Extender Vue
-- [ ] Extender Angular
-- [ ] Extender Svelte
-- [ ] Tipado de APIs externas
-- [ ] Tipado de fetch
-- [ ] Tipado de axios
-- [ ] Tipado de superagent
-- [ ] Tipado de got
-- [ ] Tipado de ws (WebSocket)
-- [ ] Tipado de socket.io
-- [ ] Tipado de graphql-request
-- [ ] Tipado de apollo-client
-- [ ] Tipado de urql
-- [ ] Tipado de relay
-- [ ] Tipado de redis
-- [ ] Tipado de kafka-node
-- [ ] Tipado de amqplib
-- [ ] Tipado de bullmq
-- [ ] Tipado de prisma
-- [ ] Tipado de drizzle
-- [ ] Tipado de sequelize
-- [ ] Tipado de mongoose
-- [ ] Tipado de typeorm
-- [ ] Tipado de knex
-- [ ] Tipado de pg
-- [ ] Tipado de mysql2
-- [ ] Tipado de sqlite3
-- [ ] Tipado de better-sqlite3
-- [ ] Tipado de mongodb
-- [ ] Tipado de elasticsearch
-- [ ] Tipado de meilisearch
-- [ ] Tipado de algolia
-- [ ] Tipado de stripe
-- [ ] Tipado de paypal-sdk
-- [ ] Tipado de braintree
-- [ ] Tipado de square-sdk
-- [ ] Tipado de aws-sdk
-- [ ] Tipado de gcp-sdk
-- [ ] Tipado de azure-sdk
-- [ ] Tipado de supabase
-- [ ] Tipado de firebase
-- [ ] Tipado de pocketbase
-- [ ] Tipado de fauna-db
-- [ ] Tipado de planetScale
-- [ ] Tipado de vercel SDK
-- [ ] Tipado de netlify SDK
-- [ ] Tipado de cloudflare SDK
-- [ ] Tipado de openai SDK
-- [ ] Tipado de anthropic SDK
-- [ ] Tipado de huggingface SDK
-- [ ] Tipado de langchain
-- [ ] Tipado de llamaindex
-- [ ] Tipado de ml5.js
-- [ ] Tipado de tensorflow.js
-- [ ] Tipado de onnxruntime
-- [ ] Tipado de webgpu APIs
-- [ ] Tipado de three.js
-- [ ] Tipado de babylon.js
-- [ ] Tipado de d3.js
-- [ ] Tipado de chart.js
-- [ ] Tipado de echarts
-- [ ] Tipado de highcharts
-- [ ] Tipado de leaflet
-- [ ] Tipado de mapbox
-- [ ] Tipado de deck.gl
-- [ ] Tipado de cesium
-- [ ] Tipado de i18next
-- [ ] Tipado de react-intl
-- [ ] Tipado de vue-i18n
-- [ ] Tipado de angular-i18n
-- [ ] Tipado de svelte-i18n
-- [ ] Tipado de zod
-- [ ] Tipado de yup
-- [ ] Tipado de joi
-- [ ] Tipado de ajv
-- [ ] Tipado de typia
-- [ ] Estrategias para librerías sin tipos
-- [ ] any vs unknown en librerías
-- [ ] Módulos con export =
-- [ ] Módulos con export default
-- [ ] Carga dinámica de librerías
-- [ ] Mocking de librerías externas
-- [ ] Tests con librerías sin tipos
-- [ ] Anti-patterns en uso de librerías
-- [ ] Ejercicios de tipado de librerías
-- [ ] Mini-proyecto: Integración de 5 librerías externas tipadas
-
 ## 📘 Módulo 19: Patrones de Diseño con TypeScript
-
 > **Propósito:** Aplicar patrones clásicos y modernos de diseño en el ecosistema TypeScript, con tipado fuerte y seguro.
-
-- [ ] Introducción a patrones de diseño en TS
-- [ ] Ventajas de patrones con tipado
-- [ ] Patrón Singleton
-- [ ] Patrón Factory Method
-- [ ] Patrón Abstract Factory
-- [ ] Patrón Builder
-- [ ] Patrón Prototype
-- [ ] Patrón Adapter
-- [ ] Patrón Bridge
-- [ ] Patrón Composite
-- [ ] Patrón Decorator
-- [ ] Patrón Facade
-- [ ] Patrón Flyweight
-- [ ] Patrón Proxy
-- [ ] Patrón Chain of Responsibility
-- [ ] Patrón Command
-- [ ] Patrón Interpreter
-- [ ] Patrón Iterator
-- [ ] Patrón Mediator
-- [ ] Patrón Memento
-- [ ] Patrón Observer
-- [ ] Patrón State
-- [ ] Patrón Strategy
-- [ ] Patrón Template Method
-- [ ] Patrón Visitor
-- [ ] Patrón Dependency Injection
-- [ ] Patrón Service Locator
-- [ ] Patrón Repository
-- [ ] Patrón Unit of Work
-- [ ] Patrón Aggregate Root
-- [ ] Patrón Value Object
-- [ ] Patrón Entity
-- [ ] Patrón Domain Event
-- [ ] Patrón CQRS
-- [ ] Patrón Event Sourcing
-- [ ] Patrón Pub/Sub
-- [ ] Patrón Saga
-- [ ] Patrón Circuit Breaker
-- [ ] Patrón Bulkhead
-- [ ] Patrón Retry
-- [ ] Patrón Rate Limiter
-- [ ] Patrón Feature Toggle
-- [ ] Patrón Pipeline
-- [ ] Patrón Middleware
-- [ ] Patrón Module
-- [ ] Patrón Layered Architecture
-- [ ] Patrón Hexagonal Architecture
-- [ ] Patrón Onion Architecture
-- [ ] Patrón Clean Architecture
-- [ ] Patrón Microkernel
-- [ ] Patrón MVC
-- [ ] Patrón MVVM
-- [ ] Patrón MVP
-- [ ] Patrón Flux
-- [ ] Patrón Redux
-- [ ] Patrón Event Bus
-- [ ] Patrón Store
-- [ ] Patrón Repository + Service
-- [ ] Patrón DTO
-- [ ] Patrón DAO
-- [ ] Patrón Gateway
-- [ ] Patrón Adapter avanzado
-- [ ] Patrón Anti-corruption Layer
-- [ ] Patrón API Gateway
-- [ ] Patrón BFF (Backend for Frontend)
-- [ ] Patrón Strangler Fig
-- [ ] Patrón Monolito Modular
-- [ ] Patrón Microservicio
-- [ ] Patrón Serverless
-- [ ] Patrón Event-driven
-- [ ] Patrón Actor Model
-- [ ] Patrón Supervisor Tree
-- [ ] Patrón Circuit Supervisor
-- [ ] Patrón Observer con generics
-- [ ] Patrón Strategy con union types
-- [ ] Patrón State con discriminated unions
-- [ ] Patrón Visitor con template literal types
-- [ ] Patrón Decorator con decorators TS 5.x
-- [ ] Patrón Command con clases genéricas
-- [ ] Patrón Adapter con branded types
-- [ ] Patrones funcionales en TS
-- [ ] Patrones monádicos (Option/Either)
-- [ ] Patrones de currying y composición
-- [ ] Patrones de pipelines
-- [ ] Patrones de reducers
-- [ ] Patrones de transformadores
-- [ ] Patrones de validadores
-- [ ] Patrones de parsers
-- [ ] Patrones de serializers
-- [ ] Patrones de deserializers
-- [ ] Anti-patterns comunes
-- [ ] God Object
-- [ ] Service Locator mal usado
-- [ ] Singleton abusivo
-- [ ] Inyección circular
-- [ ] Hardcodeo de dependencias
-- [ ] Falta de contratos tipados
-- [ ] Ejercicios de patrones
-- [ ] Retos de arquitectura en TS
-- [ ] Mini-proyecto: Framework de patrones en TS
-
 ## 📘 Módulo 20: Optimización y Rendimiento en TypeScript
-
 > **Propósito:** Aprender a escribir código TypeScript eficiente, escalable y con performance controlado.
-
-- [ ] Concepto de rendimiento en TS
-- [ ] Rendimiento en compilación
-- [ ] Rendimiento en checker de tipos
-- [ ] Rendimiento en tsc --watch
-- [ ] Estrategias de build incremental
-- [ ] Uso de skipLibCheck
-- [ ] Uso de --noCheck (TS 5.6+)
-- [ ] Rendimiento en project references
-- [ ] Optimización de tsconfig.json
-- [ ] Minimización de dependencias
-- [ ] Optimización de imports
-- [ ] Tree-shaking efectivo
-- [ ] Dead code elimination
-- [ ] Split de bundles
-- [ ] Carga lazy
-- [ ] Carga condicional
-- [ ] Preload de módulos críticos
-- [ ] Prefetch de assets
-- [ ] Empaquetado eficiente con esbuild
-- [ ] Empaquetado eficiente con tsup
-- [ ] Empaquetado eficiente con Vite
-- [ ] Empaquetado eficiente con Rollup
-- [ ] Empaquetado eficiente con Webpack
-- [ ] Benchmarks de bundles
-- [ ] Medición con Webpack Bundle Analyzer
-- [ ] Medición con esbuild-analyzer
-- [ ] Medición con Source Map Explorer
-- [ ] Optimización de código JS generado
-- [ ] Uso de target adecuado
-- [ ] Uso de lib reducido
-- [ ] Reducción de polyfills
-- [ ] Optimización de funciones puras
-- [ ] Optimización de funciones async
-- [ ] Optimización de promesas
-- [ ] Optimización de workers
-- [ ] Optimización de streams
-- [ ] Optimización de observables
-- [ ] Optimización de colecciones
-- [ ] Optimización de arrays
-- [ ] Optimización de objetos
-- [ ] Optimización de tuplas
-- [ ] Optimización de mapas y sets
-- [ ] Optimización de JSON parsing
-- [ ] Optimización de serialización
-- [ ] Optimización de deserialización
-- [ ] Uso de structuredClone
-- [ ] Uso de transferrables
-- [ ] Uso de SharedArrayBuffer
-- [ ] Uso de Atomics
-- [ ] Concurrencia controlada
-- [ ] Evitar race conditions
-- [ ] Evitar memory leaks
-- [ ] Evitar closures innecesarios
-- [ ] Evitar funciones anidadas pesadas
-- [ ] Evitar recursion infinita
-- [ ] Evitar estructuras demasiado anchas
-- [ ] Evitar tipos excesivamente complejos
-- [ ] Optimización del checker en tipos
-- [ ] Limitar recursion en tipos
-- [ ] Limitar unions masivas
-- [ ] Limitar intersections masivas
-- [ ] Optimización de template literal types
-- [ ] Optimización de mapped types
-- [ ] Optimización de generics complejos
-- [ ] Simplificación con utilidades
-- [ ] Refactorización hacia tipos más simples
-- [ ] Uso de satisfies para reducir errores
-- [ ] Prevalidación de inputs
-- [ ] Tipos intermedios de ayuda
-- [ ] Tipos alias para simplificar
-- [ ] Performance profiling en Node.js
-- [ ] Performance profiling en Browser
-- [ ] Uso de Chrome DevTools
-- [ ] Uso de Node DevTools
-- [ ] Uso de perf hooks
-- [ ] Medición de heap usage
-- [ ] Medición de CPU usage
-- [ ] Medición de GC (garbage collector)
-- [ ] Optimización de GC en V8
-- [ ] Optimización de loops
-- [ ] Optimización de map/filter/reduce
-- [ ] Optimización de sort
-- [ ] Optimización de búsqueda
-- [ ] Optimización de acceso a objetos
-- [ ] Optimización de acceso a arrays
-- [ ] Minimización de allocations
-- [ ] Minimización de objetos temporales
-- [ ] Minimización de promesas anidadas
-- [ ] Minimización de await en bucles
-- [ ] Uso de Promise.all
-- [ ] Uso de Promise.race
-- [ ] Uso de Promise.any
-- [ ] Evitar await secuenciales innecesarios
-- [ ] Evitar bloqueos sync
-- [ ] Evitar JSON.parse/stringify excesivos
-- [ ] Evitar librerías pesadas
-- [ ] Evaluación de bundle size
-- [ ] Evaluación de cold starts
-- [ ] Retos de optimización en proyectos TS
-- [ ] Mini-proyecto: App optimizada en TS con métricas
-
 ## 📘 Módulo 21: Integración con Frameworks Frontend (React, Vue, Angular, Svelte)
-
 > **Propósito:** Aprender a usar TypeScript en frameworks modernos de frontend con tipado completo.
-
-- [ ] Introducción de TS en frontend
-- [ ] Configuración de React con TS
-- [ ] tsconfig.json para React
-- [ ] Tipado de props en React
-- [ ] Tipado de children en React
-- [ ] Tipado de refs en React
-- [ ] Tipado de context en React
-- [ ] Tipado de hooks personalizados
-- [ ] Tipado de useState
-- [ ] Tipado de useReducer
-- [ ] Tipado de useEffect
-- [ ] Tipado de useMemo
-- [ ] Tipado de useCallback
-- [ ] Tipado de useRef
-- [ ] Tipado de useContext
-- [ ] Tipado de forwardRef
-- [ ] Tipado de React.FC (y cuándo no usarlo)
-- [ ] Componentes de orden superior tipados
-- [ ] Tipado de eventos en React
-- [ ] Tipado de formularios en React
-- [ ] Tipado de rutas en React Router
-- [ ] Tipado de loaders/actions en React Router v6.4+
-- [ ] Tipado de APIs en React Query
-- [ ] Tipado de mutaciones en React Query
-- [ ] Tipado de estados con Zustand
-- [ ] Tipado de estados con Jotai
-- [ ] Tipado de estados con Redux Toolkit
-- [ ] Tipado de middlewares Redux
-- [ ] Tipado de RTK Query
-- [ ] Tipado de React Hook Form
-- [ ] Tipado de Zod con RHF
-- [ ] Tipado de styled-components
-- [ ] Tipado de emotion
-- [ ] Tipado de tailwind-variants
-- [ ] Tipado de shadcn/ui
-- [ ] Tipado de Radix UI
-- [ ] Migración de proyectos React JS → TS
-- [ ] Anti-patterns en React TS
-- [ ] Configuración de Vue 3 con TS
-- [ ] <script setup lang="ts">
-- [ ] Tipado de props en Vue
-- [ ] Tipado de emits en Vue
-- [ ] Tipado de slots en Vue
-- [ ] Tipado de refs en Vue
-- [ ] Tipado de composables
-- [ ] Tipado de stores en Pinia
-- [ ] Tipado de Vue Router
-- [ ] Tipado de VueUse
-- [ ] Tipado de Nuxt 3 con TS
-- [ ] Anti-patterns en Vue TS
-- [ ] Configuración de Angular con TS
-- [ ] Tipado de componentes en Angular
-- [ ] Tipado de servicios en Angular
-- [ ] Tipado de DI en Angular
-- [ ] Tipado de signals en Angular 17
-- [ ] Tipado de forms en Angular
-- [ ] Tipado de routing en Angular
-- [ ] Tipado de guards en Angular
-- [ ] Tipado de resolvers en Angular
-- [ ] Tipado de pipes en Angular
-- [ ] Tipado de directives en Angular
-- [ ] Anti-patterns en Angular TS
-- [ ] Configuración de Svelte + TS
-- [ ] Tipado de stores en Svelte
-- [ ] Tipado de props en Svelte
-- [ ] Tipado de slots en Svelte
-- [ ] Tipado de eventos en Svelte
-- [ ] Tipado de context en Svelte
-- [ ] Tipado de routing en SvelteKit
-- [ ] Tipado de loaders en SvelteKit
-- [ ] Tipado de actions en SvelteKit
-- [ ] Tipado de endpoints en SvelteKit
-- [ ] Anti-patterns en Svelte TS
-- [ ] Integración de i18n en frontend TS
-- [ ] Integración de forms tipados
-- [ ] Integración de APIs tipadas
-- [ ] Integración de testing con React
-- [ ] Integración de testing con Vue
-- [ ] Integración de testing con Angular
-- [ ] Integración de testing con Svelte
-- [ ] Performance en React TS
-- [ ] Performance en Vue TS
-- [ ] Performance en Angular TS
-- [ ] Performance en Svelte TS
-- [ ] DX en proyectos frontend TS
-- [ ] Configuración de storybook con TS
-- [ ] Tipado de stories en storybook
-- [ ] Tipado de decorators en storybook
-- [ ] Mocking de APIs en storybook
-- [ ] Generación de tipos automáticos de props
-- [ ] Validación runtime con Zod + frontend
-- [ ] Migración progresiva en frontends
-- [ ] Estrategias de adopción TS en grandes equipos
-- [ ] Documentación TS en frontends
-- [ ] Auditorías de tipos en frontends
-- [ ] Errores comunes en frontends TS
-- [ ] Ejercicios de frontends tipados
-- [ ] Retos prácticos con React y TS
-- [ ] Retos prácticos con Vue/Angular/Svelte y TS
-- [ ] Mini-proyecto: SPA tipada con React + TS
-
 ## 📘 Módulo 22: Integración con Frameworks Backend (Node, NestJS, Express, Fastify)
-
 > **Propósito:** Aplicar TS en el backend con librerías y frameworks populares, asegurando tipado end-to-end.
-
-- [ ] Configuración de Node + TS
-- [ ] Tipado de fs en Node
-- [ ] Tipado de path en Node
-- [ ] Tipado de http en Node
-- [ ] Tipado de https en Node
-- [ ] Tipado de crypto en Node
-- [ ] Tipado de stream en Node
-- [ ] Tipado de events en Node
-- [ ] Tipado de workers en Node
-- [ ] Tipado de cluster en Node
-- [ ] Configuración de Express + TS
-- [ ] Tipado de req en Express
-- [ ] Tipado de res en Express
-- [ ] Tipado de middlewares Express
-- [ ] Tipado de routers Express
-- [ ] Tipado de errors Express
-- [ ] Tipado de sesiones Express
-- [ ] Tipado de cookies Express
-- [ ] Tipado de JWT en Express
-- [ ] Configuración de Fastify + TS
-- [ ] Tipado de req en Fastify
-- [ ] Tipado de res en Fastify
-- [ ] Tipado de schemas en Fastify
-- [ ] Tipado de plugins Fastify
-- [ ] Tipado de hooks Fastify
-- [ ] Configuración de NestJS + TS
-- [ ] Tipado de módulos NestJS
-- [ ] Tipado de controladores NestJS
-- [ ] Tipado de servicios NestJS
-- [ ] Tipado de providers NestJS
-- [ ] Tipado de middlewares NestJS
-- [ ] Tipado de pipes NestJS
-- [ ] Tipado de guards NestJS
-- [ ] Tipado de interceptores NestJS
-- [ ] Decorators en NestJS
-- [ ] DTOs tipados en NestJS
-- [ ] Validación de DTOs con class-validator
-- [ ] Tipado de GraphQL en NestJS
-- [ ] Tipado de websockets en NestJS
-- [ ] Tipado de microservicios en NestJS
-- [ ] Tipado de Kafka con NestJS
-- [ ] Tipado de RabbitMQ con NestJS
-- [ ] Tipado de gRPC en NestJS
-- [ ] Tipado de colas en BullMQ
-- [ ] Tipado de cron jobs en NestJS
-- [ ] Tipado de workers en NestJS
-- [ ] Tipado de interceptores globales
-- [ ] Integración con Swagger en NestJS
-- [ ] Generación de tipos desde OpenAPI
-- [ ] Configuración de Hono + TS
-- [ ] Tipado de req en Hono
-- [ ] Tipado de res en Hono
-- [ ] Tipado de context en Hono
-- [ ] Integración de Zod en Hono
-- [ ] Integración de Drizzle en Hono
-- [ ] Configuración de Elysia + TS
-- [ ] Tipado de endpoints en Elysia
-- [ ] Tipado de middlewares en Elysia
-- [ ] Tipado de context en Elysia
-- [ ] Integración con tRPC
-- [ ] Tipado de routers tRPC
-- [ ] Tipado de procedimientos tRPC
-- [ ] Tipado de inputs en tRPC
-- [ ] Tipado de outputs en tRPC
-- [ ] Validación con Zod en tRPC
-- [ ] End-to-end typing en tRPC
-- [ ] Generación automática de tipos de cliente
-- [ ] Testing en Express con TS
-- [ ] Testing en Fastify con TS
-- [ ] Testing en NestJS con TS
-- [ ] Testing en Hono/Elysia con TS
-- [ ] Integración de logging tipado
-- [ ] Integración de métricas tipadas
-- [ ] Integración de tracing tipado
-- [ ] Integración de observabilidad
-- [ ] Seguridad en Express con TS
-- [ ] Seguridad en Fastify con TS
-- [ ] Seguridad en NestJS con TS
-- [ ] Seguridad en Hono/Elysia con TS
-- [ ] Autenticación tipada en backend
-- [ ] Autorización tipada en backend
-- [ ] Roles y permisos tipados
-- [ ] Acceso basado en atributos (ABAC)
-- [ ] Acceso basado en roles (RBAC)
-- [ ] Integración con bases de datos (Prisma)
-- [ ] Integración con bases de datos (Drizzle)
-- [ ] Integración con bases de datos (TypeORM)
-- [ ] Integración con bases de datos (Mongoose)
-- [ ] Integración con caches (Redis)
-- [ ] Integración con colas (Kafka)
-- [ ] Integración con colas (RabbitMQ)
-- [ ] Integración con colas (SQS)
-- [ ] Integración con colas (BullMQ)
-- [ ] Estrategias de microservicios tipados
-- [ ] Estrategias de serverless tipados
-- [ ] Anti-patterns en backend TS
-- [ ] Ejercicios de APIs tipadas
-- [ ] Retos de microservicios tipados
-- [ ] Retos de serverless tipados
-- [ ] Mini-proyecto: API completa en NestJS con TS
-
 ## 📘 Módulo 23: Bases de Datos y ORM con TypeScript
-
 > **Propósito:** Aprender a integrar TS con bases de datos SQL y NoSQL usando ORMs y drivers tipados.
-
-- [ ] Introducción a DBs con TS
-- [ ] Tipado de queries SQL
-- [ ] Tipado de parámetros SQL
-- [ ] Tipado de resultados SQL
-- [ ] Tipado de migraciones SQL
-- [ ] Uso de Prisma ORM
-- [ ] Definición de esquemas Prisma
-- [ ] Generación de tipos Prisma
-- [ ] Validación con Prisma Client
-- [ ] Migraciones con Prisma
-- [ ] Seeds con Prisma
-- [ ] Prisma Middlewares
-- [ ] Prisma Transactions
-- [ ] Prisma con PostgreSQL
-- [ ] Prisma con MySQL
-- [ ] Prisma con SQLite
-- [ ] Prisma con MongoDB
-- [ ] Prisma con CockroachDB
-- [ ] Prisma con PlanetScale
-- [ ] Prisma con Supabase
-- [ ] Prisma con NeonDB
-- [ ] Uso de Drizzle ORM
-- [ ] Definición de esquemas Drizzle
-- [ ] Migraciones Drizzle
-- [ ] Queries tipadas en Drizzle
-- [ ] Validación en Drizzle
-- [ ] Transacciones en Drizzle
-- [ ] Drizzle con PostgreSQL
-- [ ] Drizzle con MySQL
-- [ ] Drizzle con SQLite
-- [ ] Uso de TypeORM
-- [ ] Entidades en TypeORM
-- [ ] Repositorios en TypeORM
-- [ ] Migraciones en TypeORM
-- [ ] Relaciones en TypeORM
-- [ ] Tipado de relaciones
-- [ ] Transacciones en TypeORM
-- [ ] Testing con TypeORM
-- [ ] Uso de Sequelize
-- [ ] Modelos en Sequelize
-- [ ] Migraciones en Sequelize
-- [ ] Validaciones en Sequelize
-- [ ] Relación tipada en Sequelize
-- [ ] Uso de Mongoose
-- [ ] Esquemas en Mongoose
-- [ ] Validación en Mongoose
-- [ ] Relaciones en Mongoose
-- [ ] Virtuals en Mongoose
-- [ ] Hooks en Mongoose
-- [ ] Tipado de ObjectId
-- [ ] Uso de Supabase + TS
-- [ ] Supabase Client tipado
-- [ ] Realtime en Supabase
-- [ ] Auth en Supabase
-- [ ] Uso de Firebase + TS
-- [ ] Firestore tipado
-- [ ] RTDB tipado
-- [ ] Auth en Firebase tipado
-- [ ] Uso de Pocketbase
-- [ ] Uso de FaunaDB
-- [ ] Uso de PlanetScale con Prisma
-- [ ] Uso de NeonDB con Drizzle
-- [ ] Estrategias multi-DB
-- [ ] DB caching tipado
-- [ ] DB sharding tipado
-- [ ] DB replication tipado
-- [ ] DB failover tipado
-- [ ] DB consistency tipada
-- [ ] Patrones CQRS con DBs
-- [ ] Patrones Event Sourcing con DBs
-- [ ] Estrategias ACID tipadas
-- [ ] Estrategias BASE tipadas
-- [ ] ORM vs Query Builders
-- [ ] Knex.js con TS
-- [ ] Kysely con TS
-- [ ] Slonik con TS
-- [ ] SQL Template Strings tipados
-- [ ] Anti-patterns en DB con TS
-- [ ] N+1 queries
-- [ ] Inyección SQL
-- [ ] Falta de validación en queries
-- [ ] Queries sin tipado
-- [ ] Errores comunes en ORMs
-- [ ] Errores comunes en NoSQL
-- [ ] Migraciones inseguras
-- [ ] Seeds inseguros
-- [ ] Tests de DB tipada
-- [ ] Tests de ORMs tipados
-- [ ] Tests de drivers tipados
-- [ ] Tests de relaciones tipadas
-- [ ] Observabilidad en DB con TS
-- [ ] Logs de queries tipados
-- [ ] Métricas de DB tipadas
-- [ ] Tracing de queries tipadas
-- [ ] Auditorías en DB tipadas
-- [ ] Ejercicios de queries tipadas
-- [ ] Retos de ORMs tipados
-- [ ] Retos de NoSQL tipados
-- [ ] Ejercicios de DBs distribuidas
-- [ ] Mini-proyecto: App con Prisma + PostgreSQL tipado
-
 ## 📘 Módulo 24: GraphQL y TypeScript
-
 > **Propósito:** Integrar GraphQL en proyectos TypeScript con tipado fuerte, desde schemas hasta clientes.
+## 📘 Módulo 25: REST APIs y TypeScript
+> **Propósito:** Construir y consumir APIs REST con TypeScript asegurando tipado end-to-end.
+## 📘 Módulo 26: Testing End-to-End y Contratos en TypeScript
+> **Propósito:** Diseñar pruebas de extremo a extremo y contratos tipados para aplicaciones distribuidas.
+## 📘 Módulo 27: gRPC, WebSockets y Comunicación en Tiempo Real con TS
+> **Propósito:** Aprender a implementar y tipar comunicación en tiempo real y RPC en TypeScript.
+## 📘 Módulo 28: Serverless, Edge y Cloud Functions en TypeScript
+> **Propósito:** Desplegar aplicaciones TS en entornos serverless y edge con tipado seguro.
+## 📘 Módulo 29: Microservicios y Distribución en TypeScript
+> **Propósito:** Construir arquitecturas distribuidas con TS, microservicios, mensajería y resiliencia.
+## 📘 Módulo 30: Monorepos, Escalabilidad y Gestión Empresarial con TypeScript
+> **Propósito:** Aprender a estructurar, escalar y mantener proyectos grandes en entornos empresariales con monorepos y TypeScript.
 
-- [ ] Introducción a GraphQL con TS
-- [ ] Tipado de queries
-- [ ] Tipado de mutations
-- [ ] Tipado de subscriptions
-- [ ] Tipado de resolvers
-- [ ] Tipado de context
-- [ ] Tipado de args
-- [ ] Tipado de inputs
-- [ ] Tipado de outputs
-- [ ] Tipado de scalars básicos
-- [ ] Custom scalars tipados
-- [ ] Date scalar tipado
-- [ ] JSON scalar tipado
-- [ ] UUID scalar tipado
-- [ ] Email scalar tipado
-- [ ] Validación de inputs con TS
-- [ ] Validación con Zod en GraphQL
-- [ ] Validación con Yup en GraphQL
-- [ ] Validación con io-ts
-- [ ] Validación con typia
-- [ ] Code-first con TypeGraphQL
-- [ ] Schema-first con GraphQL Tools
-- [ ] Apollo Server con TS
-- [ ] Apollo Federation con TS
-- [ ] Apollo Subgraph con TS
-- [ ] Apollo Gateway con TS
-- [ ] Apollo Client con TS
-- [ ] urql con TS
-- [ ] relay con TS
-- [ ] graphql-request con TS
-- [ ] Generación de tipos con GraphQL Codegen
-- [ ] Tipado de fragments
-- [ ] Tipado de fragments con gql-tag
-- [ ] Tipado de variables
-- [ ] Tipado de operaciones
-- [ ] Tipado de responses
-- [ ] Tipado de errores
-- [ ] GraphQL Subscriptions con WS
-- [ ] GraphQL Subscriptions con SSE
-- [ ] GraphQL Subscriptions con MQTT
-- [ ] Tipado de subscriptions en Apollo
-- [ ] Tipado de resolvers async
-- [ ] Tipado de resolvers sync
-- [ ] Tipado de resolvers federados
-- [ ] Tipado de resolvers con dataloaders
-- [ ] Uso de dataloaders tipados
-- [ ] Batch resolvers
-- [ ] Caching en GraphQL
-- [ ] Caching en resolvers
-- [ ] Caching en Apollo Client
-- [ ] Persisted Queries
-- [ ] Persisted Queries con TS
-- [ ] Schema Stitching tipado
-- [ ] Mocks en GraphQL con TS
-- [ ] Testing de resolvers con Jest
-- [ ] Testing de resolvers con Vitest
-- [ ] Testing de Apollo Client
-- [ ] Testing de urql
-- [ ] Testing de relay
-- [ ] Seguridad en GraphQL con TS
-- [ ] Rate limiting en GraphQL
-- [ ] Depth limiting
-- [ ] Cost analysis
-- [ ] Persisted queries seguras
-- [ ] Autenticación en GraphQL
-- [ ] Autorización en GraphQL
-- [ ] Roles en GraphQL
-- [ ] Permisos en GraphQL
-- [ ] Shield con GraphQL
-- [ ] GraphQL Mesh con TS
-- [ ] GraphQL Yoga con TS
-- [ ] Mercurius con TS
-- [ ] Helix con TS
-- [ ] NestJS GraphQL con TS
-- [ ] Integración con Prisma
-- [ ] Integración con Drizzle
-- [ ] Integración con TypeORM
-- [ ] Integración con Sequelize
-- [ ] Integración con Mongoose
+- [ ] Introducción a monorepos
+- [ ] Beneficios de monorepos en TS
+- [ ] Monorepo vs polyrepo
+- [ ] Nx con TypeScript
+- [ ] Turborepo con TypeScript
+- [ ] pnpm workspaces
+- [ ] Yarn workspaces
+- [ ] NPM workspaces
+- [ ] Configuración inicial de monorepo
+- [ ] Estructura recomendada de carpetas
+- [ ] Configuración de tsconfig.base.json
+- [ ] Configuración de project references
+- [ ] Compilación incremental en monorepo
+- [ ] Build mode (tsc -b) en monorepo
+- [ ] Estrategias de caching en monorepos
+- [ ] Caching en Nx
+- [ ] Caching en Turborepo
+- [ ] Estrategias de pipelines en monorepo
+- [ ] Pipelines en Nx
+- [ ] Pipelines en Turborepo
+- [ ] Testing en monorepo
+- [ ] Testing compartido
+- [ ] Testing por paquete
+- [ ] Testing distribuido en CI
+- [ ] Linting en monorepo
+- [ ] Configuración de ESLint compartida
+- [ ] Configuración de Prettier compartida
+- [ ] Configuración de Husky compartida
+- [ ] Configuración de commitlint compartida
+- [ ] Estrategias de versionado en monorepo
+- [ ] Versionado independiente por paquete
+- [ ] Versionado global
+- [ ] Uso de changesets
+- [ ] Publicación de paquetes desde monorepo
+- [ ] Publicación con npm
+- [ ] Publicación con GitHub Packages
+- [ ] Publicación con Verdaccio
+- [ ] Publicación con Artifactory
+- [ ] Gestión de dependencias compartidas
+- [ ] Gestión de dependencias internas
+- [ ] Link entre paquetes internos
+- [ ] Alias de paths en monorepo
+- [ ] Estrategias de refactor en monorepo
+- [ ] Refactor continuo con project refs
+- [ ] Observabilidad en monorepo
+- [ ] Logs compartidos
+- [ ] Métricas compartidas
+- [ ] Tracing compartido
+- [ ] Documentación en monorepo
+- [ ] Storybook compartido
+- [ ] Docs con Docusaurus
+- [ ] Docs con VitePress
+- [ ] Docs con Next.js
+- [ ] Estrategias de CI en monorepo
+- [ ] GitHub Actions con monorepo
+- [ ] GitLab CI con monorepo
+- [ ] CircleCI con monorepo
+- [ ] Jenkins con monorepo
+- [ ] Azure DevOps con monorepo
+- [ ] Deploys multi-paquete
+- [ ] Deploys independientes
+- [ ] Deploys coordinados
+- [ ] Deploys canary
+- [ ] Deploys blue/green
+- [ ] Deploys rolling
+- [ ] Deploys híbridos
+- [ ] Feature flags en monorepo
+- [ ] AB testing en monorepo
+- [ ] Canary releases en monorepo
+- [ ] Estrategias de rollback
+- [ ] Auditoría de cambios en monorepo
+- [ ] Auditoría de dependencias
+- [ ] Auditoría de seguridad
+- [ ] Auditoría de configuraciones
+- [ ] Anti-patterns en monorepos
+- [ ] Monorepos gigantes sin control
+- [ ] Dependencias duplicadas
+- [ ] Falta de project references
+- [ ] Builds lentas
+- [ ] Falta de caching
+- [ ] Errores comunes en monorepos
+- [ ] CI saturado en monorepos
+- [ ] Confusión en ownership de paquetes
+- [ ] Estrategias de ownership claras
+- [ ] CODEOWNERS en monorepo
+- [ ] Estrategias de comunicación en equipos grandes
+- [ ] Estrategias de documentación en equipos grandes
+- [ ] Estrategias de colaboración inter-equipo
+- [ ] Estrategias de escalabilidad organizacional
+- [ ] Micro-frontends en monorepos
+- [ ] Micro-backends en monorepos
+- [ ] Integración con GraphQL federado
+- [ ] Integración con REST distribuido
+- [ ] Integración con gRPC distribuido
+- [ ] Observabilidad empresarial en TS
+- [ ] Retos de escalabilidad en TS
+- [ ] Ejercicios de refactor en monorepo
+- [ ] Ejercicios de CI/CD en monorepo
+- [ ] Ejercicios de seguridad en monorepo
+- [ ] Mini-proyecto: Monorepo empresarial con Nx + TS
+
+## 📘 Módulo 31: TypeScript en DevOps y CI/CD
+> **Propósito:** Integrar TS en pipelines DevOps, automatización, testing continuo y despliegues empresariales.
+
+- [ ] Introducción a DevOps con TS
+- [ ] Beneficios de tipado en pipelines
+- [ ] Configuración de CI/CD con TS
+- [ ] GitHub Actions con TS
+- [ ] GitLab CI con TS
+- [ ] CircleCI con TS
+- [ ] Jenkins con TS
+- [ ] Azure DevOps con TS
+- [ ] TravisCI con TS
+- [ ] Bitbucket Pipelines con TS
+- [ ] Creación de scripts en TS para CI
+- [ ] ts-node en pipelines
+- [ ] tsx en pipelines
+- [ ] Compilación incremental en CI
+- [ ] Cacheo de builds en CI
+- [ ] Testing en pipelines
+- [ ] Unit tests en CI
+- [ ] Integration tests en CI
+- [ ] E2E tests en CI
+- [ ] Contract tests en CI
+- [ ] Coverage en CI
+- [ ] Reportes de coverage en CI
+- [ ] Reportes de lint en CI
+- [ ] Reportes de build en CI
+- [ ] Validación de tipos en CI
+- [ ] tsc --noEmit en pipelines
+- [ ] Auditoría de dependencias en CI
+- [ ] Dependabot en CI
+- [ ] Renovate en CI
+- [ ] Escaneo de vulnerabilidades en CI
+- [ ] SonarQube en CI
+- [ ] ESLint report en CI
+- [ ] Prettier en CI
+- [ ] Commitlint en CI
+- [ ] Husky en CI
+- [ ] Lint-staged en CI
+- [ ] Conventional commits en CI
+- [ ] Changelogs automáticos en CI
+- [ ] Release automático en CI
+- [ ] Versionado semántico en CI
+- [ ] Canary releases en CI
+- [ ] Blue/Green deploys en CI
+- [ ] Rolling deploys en CI
+- [ ] Feature flags en CI
+- [ ] AB testing en CI
+- [ ] Shadow deploys en CI
+- [ ] Multi-env deploys en CI
+- [ ] Estrategias de rollback en CI
+- [ ] Backups automáticos en CI
+- [ ] Disaster recovery con TS
+- [ ] Validación de infra con TS
+- [ ] Pulumi con TS
+- [ ] CDK de AWS con TS
+- [ ] CDK de Azure con TS
+- [ ] CDK de GCP con TS
+- [ ] Terraform CDK con TS
+- [ ] Kubernetes manifests con TS
+- [ ] Helm charts generados con TS
+- [ ] ArgoCD con TS
+- [ ] FluxCD con TS
+- [ ] Dockerfiles generados con TS
+- [ ] Compose files generados con TS
+- [ ] Monitoreo en pipelines con TS
+- [ ] Logs en pipelines
+- [ ] Métricas en pipelines
+- [ ] Tracing en pipelines
+- [ ] Observabilidad end-to-end
+- [ ] Testing de resiliencia en pipelines
+- [ ] Testing de seguridad en pipelines
+- [ ] Testing de performance en pipelines
+- [ ] Estrategias multi-cloud con TS
+- [ ] Estrategias híbridas con TS
+- [ ] Infra as Code con TS
+- [ ] Configuración dinámica de entornos
+- [ ] Secrets en pipelines
+- [ ] HashiCorp Vault con TS
+- [ ] AWS Secrets Manager con TS
+- [ ] GCP Secret Manager con TS
+- [ ] Azure Key Vault con TS
+- [ ] Anti-patterns en DevOps con TS
+- [ ] Pipelines demasiado complejos
+- [ ] Falta de tipado en scripts
+- [ ] Falta de tests en pipelines
+- [ ] Falta de seguridad en pipelines
+- [ ] Ejercicios de CI/CD con TS
+- [ ] Ejercicios de deploys con TS
+- [ ] Ejercicios de infra con TS
+- [ ] Ejercicios de observabilidad con TS
+- [ ] Ejercicios de testing con TS
+- [ ] Retos de escalabilidad en CI
+- [ ] Retos de resiliencia en CI
+- [ ] Retos de seguridad en CI
+- [ ] Retos de performance en CI
+- [ ] Retos de automatización en CI
+- [ ] Integración AI en pipelines
+- [ ] Bots en pipelines con TS
+- [ ] Self-healing pipelines
+- [ ] Ejercicios de GitOps con TS
+- [ ] Ejercicios de multi-cloud con TS
+- [ ] Mini-proyecto: Pipeline CI/CD tipado fullstack
+
+## 📘 Módulo 32: TypeScript en Inteligencia Artificial y Machine Learning
+> **Propósito:** Aplicar TS para integrar, consumir y construir soluciones AI/ML en proyectos modernos.
+
+- [ ] Introducción a AI con TS
+- [ ] APIs de AI en TS
+- [ ] Tipado de OpenAI SDK
+- [ ] Tipado de Anthropic SDK
+- [ ] Tipado de HuggingFace SDK
+- [ ] Tipado de LangChain
+- [ ] Tipado de LlamaIndex
+- [ ] Tipado de TensorFlow.js
+- [ ] Tipado de onnxruntime-web
+- [ ] Tipado de ml5.js
+- [ ] Inferencia de modelos en TS
+- [ ] Chatbots tipados en TS
+- [ ] Sistemas de embeddings en TS
+- [ ] Vector stores tipados
+- [ ] Pinecone con TS
+- [ ] Weaviate con TS
+- [ ] Qdrant con TS
+- [ ] Milvus con TS
+- [ ] Faiss vía bindings con TS
+- [ ] Semantic search tipado
+- [ ] RAG (Retrieval-Augmented Generation)
+- [ ] Validación de prompts tipados
+- [ ] Prompt templates tipados
+- [ ] Prompt chains tipados
+- [ ] Agents tipados con LangChain
+- [ ] Memory tipada en LangChain
+- [ ] Tools tipadas en LangChain
+- [ ] Executors tipados
+- [ ] Evaluación de prompts con TS
+- [ ] Evaluación de outputs con TS
+- [ ] LLMOps con TS
+- [ ] Observabilidad en AI con TS
+- [ ] Logs de AI tipados
+- [ ] Métricas de AI tipadas
+- [ ] Tracing de AI tipado
+- [ ] Validación de seguridad en AI
+- [ ] Rate limiting en AI APIs
+- [ ] Caching en AI APIs
+- [ ] AB testing en AI APIs
+- [ ] Testing de prompts con TS
+- [ ] Testing de embeddings con TS
+- [ ] Testing de RAG con TS
+- [ ] Testing de agents con TS
+- [ ] Testing de evaluators con TS
+- [ ] Frontend AI con React + TS
+- [ ] Frontend AI con Vue + TS
+- [ ] Frontend AI con Angular + TS
+- [ ] Frontend AI con Svelte + TS
+- [ ] Backends AI con NestJS
+- [ ] Backends AI con Fastify
+- [ ] Backends AI con Hono
+- [ ] Backends AI con Elysia
+- [ ] Integración con WebSockets AI
+- [ ] Integración con gRPC AI
+- [ ] Integración con REST AI
+- [ ] Integración con GraphQL AI
+- [ ] Multi-agent systems en TS
+- [ ] Simulación de reasoning tipado
+- [ ] Meta-learning con TS
+- [ ] AutoML con TS (APIs externas)
+- [ ] Model monitoring en TS
+- [ ] Model drift detection
+- [ ] Data drift detection
+- [ ] Sesgos en AI detectados
+- [ ] Fairness en AI con TS
+- [ ] Compliance en AI con TS
+- [ ] GDPR + AI en TS
+- [ ] HIPAA + AI en TS
+- [ ] Seguridad en datos AI
+- [ ] Privacidad en datos AI
+- [ ] Ejercicios de chatbots en TS
+- [ ] Ejercicios de embeddings en TS
+- [ ] Ejercicios de RAG en TS
+- [ ] Ejercicios de agents en TS
+- [ ] Ejercicios de evaluators en TS
+- [ ] Ejercicios de observabilidad en AI
+- [ ] Retos de escalabilidad en AI
+- [ ] Retos de seguridad en AI
+- [ ] Retos de compliance en AI
+- [ ] Retos de fairness en AI
+- [ ] Integración AI en productos
+- [ ] AI copilots en TS
+- [ ] AI assistants en TS
+- [ ] AI bots en TS
+- [ ] AI en edge con TS
+- [ ] AI en IoT con TS
+- [ ] AI en mobile con TS
+- [ ] AI en web con TS
+- [ ] AI en backend con TS
+- [ ] AI en serverless con TS
+- [ ] AI multi-cloud con TS
+- [ ] AI híbrida con TS
+- [ ] Anti-patterns en AI con TS
+- [ ] Falta de validación de prompts
+- [ ] Falta de observabilidad en AI
+- [ ] Falta de seguridad en AI
+- [ ] Ejercicios de integración AI
+- [ ] Ejercicios de bots AI
+- [ ] Ejercicios de copilots AI
+- [ ] Mini-proyecto: Chatbot AI tipado con TS
+
+## 📘 Módulo 33: TypeScript en IoT y Sistemas Embebidos
+> **Propósito:** Usar TS en aplicaciones IoT, edge devices y sistemas conectados en tiempo real.
+
+- [ ] Introducción a IoT con TS
+- [ ] Protocolos IoT y TS
+- [ ] MQTT con TS
+- [ ] AMQP con TS
+- [ ] CoAP con TS
+- [ ] LwM2M con TS
+- [ ] HTTP en IoT con TS
+- [ ] WebSockets IoT con TS
+- [ ] gRPC IoT con TS
+- [ ] Tipado de mensajes IoT
+- [ ] Tipado de eventos IoT
+- [ ] Tipado de dispositivos IoT
+- [ ] Tipado de sensores
+- [ ] Tipado de actuadores
+- [ ] Tipado de gateways
+- [ ] Tipado de edge nodes
+- [ ] Tipado de clusters IoT
+- [ ] Tipado de redes IoT
+- [ ] Validación de datos IoT
+- [ ] Validación de streams IoT
+- [ ] Validación de batches IoT
+- [ ] Validación con Zod en IoT
+- [ ] Validación con io-ts en IoT
+- [ ] Validación con typia en IoT
+- [ ] Observabilidad en IoT con TS
+- [ ] Logs IoT tipados
+- [ ] Métricas IoT tipadas
+- [ ] Tracing IoT tipado
+- [ ] Seguridad en IoT con TS
+- [ ] Cifrado en IoT
+- [ ] Hashing en IoT
+- ] Firmas digitales en IoT
+- [ ] Certificados IoT
+- [ ] PKI en IoT
+- [ ] IAM en IoT
+- [ ] Autenticación en IoT
+- [ ] Autorización en IoT
+- [ ] Roles en IoT
+- [ ] Permisos en IoT
+- [ ] Device fingerprinting en IoT
+- [ ] Detección de anomalías en IoT
+- [ ] Machine learning en IoT con TS
+- [ ] Edge AI con TS
+- [ ] Streaming de sensores
+- [ ] Time series tipadas
+- [ ] Integración con InfluxDB
+- [ ] Integración con TimescaleDB
+- [ ] Integración con MongoDB
+- [ ] Integración con PostgreSQL
 - [ ] Integración con Redis
 - [ ] Integración con Kafka
 - [ ] Integración con RabbitMQ
-- [ ] Integración con WebSockets
-- [ ] Integración con Serverless
-- [ ] GraphQL en Edge Functions
-- [ ] GraphQL en Cloudflare Workers
-- [ ] GraphQL en Vercel
-- [ ] GraphQL en Netlify
-- [ ] GraphQL en AWS Lambda
-- [ ] Anti-patterns en GraphQL
-- [ ] Overfetching de queries
-- [ ] Underfetching de queries
-- [ ] Falta de tipado en resolvers
-- [ ] Falta de validación en inputs
-- [ ] Errores en caching
-- [ ] Ejercicios de queries tipadas
-- [ ] Ejercicios de mutations tipadas
-- [ ] Ejercicios de resolvers tipados
-- [ ] Ejercicios de clientes tipados
-- [ ] Mini-proyecto: API GraphQL tipada fullstack
-
-## 📘 Módulo 25: REST APIs y TypeScript
-
-> **Propósito:** Construir y consumir APIs REST con TypeScript asegurando tipado end-to-end.
-
-- [ ] Introducción a REST con TS
-- [ ] Tipado de endpoints
-- [ ] Tipado de rutas
-- [ ] Tipado de parámetros
-- [ ] Tipado de query params
-- [ ] Tipado de headers
-- [ ] Tipado de body
-- [ ] Tipado de responses
-- [ ] Tipado de errores
-- [ ] Tipado de middlewares
-- [ ] Validación de requests
-- [ ] Validación de responses
-- [ ] Validación con Zod
-- [ ] Validación con Yup
-- [ ] Validación con io-ts
-- [ ] Validación con typia
-- [ ] DTOs en REST
-- [ ] Tipado de DTOs con classes
-- [ ] Tipado de DTOs con interfaces
-- [ ] Tipado de DTOs con generics
-- [ ] Tipado de DTOs con Zod
-- [ ] Tipado de DTOs con TS transformers
-- [ ] Express con TS
-- [ ] Fastify con TS
-- [ ] Hono con TS
-- [ ] Elysia con TS
-- [ ] NestJS REST con TS
-- [ ] Routing-controllers con TS
-- [ ] Middleware tipado en Express
-- [ ] Middleware tipado en Fastify
-- [ ] Middleware tipado en NestJS
-- [ ] Validación en middlewares
-- [ ] Controladores tipados en Express
-- [ ] Controladores tipados en Fastify
-- [ ] Controladores tipados en NestJS
-- [ ] Services tipados
-- [ ] Repositorios tipados
-- [ ] Testing de REST con Jest
-- [ ] Testing de REST con Vitest
-- [ ] Testing de REST con supertest
-- [ ] Testing de REST con Pactum
-- [ ] Mocking de REST APIs
-- [ ] Mock Service Worker con TS
-- [ ] Swagger con TS
-- [ ] OpenAPI con TS
-- [ ] Generación de tipos desde OpenAPI
-- [ ] Validación de OpenAPI con TS
-- [ ] Autenticación en REST
-- [ ] Autorización en REST
-- [ ] Roles en REST
-- [ ] Permisos en REST
-- [ ] Rate limiting en REST
-- [ ] Caching en REST
-- [ ] Idempotencia en REST
-- [ ] Seguridad en REST
-- [ ] CSRF en REST
-- [ ] XSS en REST
-- [ ] SQL Injection en REST
-- [ ] SSRF en REST
-- [ ] DoS en REST
-- [ ] Validación de headers de seguridad
-- [ ] Configuración de CORS
-- [ ] Configuración de CSP
-- [ ] Logs en REST tipados
-- [ ] Métricas en REST tipados
-- [ ] Tracing en REST tipados
-- [ ] Observabilidad en REST
-- [ ] Versionado de APIs
-- [ ] Versionado semántico
-- [ ] Estrategias de breaking changes
-- [ ] Migraciones de endpoints
-- [ ] Estrategias de compatibilidad
-- [ ] Estrategias de backwards compatibility
-- [ ] Documentación con Swagger
-- [ ] Documentación con Redoc
-- [ ] Documentación con Stoplight
-- [ ] Documentación con Postman
-- [ ] Documentación con Insomnia
-- [ ] Anti-patterns en REST
-- [ ] Endpoints demasiado grandes
-- [ ] Endpoints demasiado pequeños
-- [ ] Falta de validación en inputs
-- [ ] Falta de validación en outputs
-- [ ] Respuestas inconsistentes
-- [ ] Errores genéricos sin tipado
-- [ ] Ejercicios de endpoints tipados
-- [ ] Ejercicios de middlewares tipados
-- [ ] Ejercicios de controladores tipados
-- [ ] Ejercicios de validación tipada
-- [ ] Ejercicios de seguridad en REST
-- [ ] Retos de API design
-- [ ] Retos de DTOs tipados
-- [ ] Retos de integración REST
-- [ ] Ejercicios de versionado
-- [ ] Ejercicios de documentación
-- [ ] Ejercicios de observabilidad
-- [ ] Ejercicios de optimización REST
-- [ ] Ejercicios de mocking REST
-- [ ] Ejercicios de testing REST
-- [ ] Mini-proyecto: API REST tipada completa
-
-## 📘 Módulo 26: Testing End-to-End y Contratos en TypeScript
-
-> **Propósito:** Diseñar pruebas de extremo a extremo y contratos tipados para aplicaciones distribuidas.
-
-- [ ] Introducción a E2E en TS
-- [ ] E2E vs Unit vs Integration
-- [ ] Tipado de escenarios E2E
-- [ ] Tipado de suites de test
-- [ ] Tipado de steps
-- [ ] Playwright con TS
-- [ ] Configuración de Playwright
-- [ ] Tipado de fixtures en Playwright
-- [ ] Tipado de tests en Playwright
-- [ ] Puppeteer con TS
-- [ ] Configuración de Puppeteer
-- [ ] Cypress con TS
-- [ ] Configuración de Cypress
-- [ ] TestCafe con TS
-- [ ] WebdriverIO con TS
-- [ ] Configuración de WebdriverIO
-- [ ] Cucumber con TS
-- [ ] Gherkin con TS
-- [ ] Steps tipados con Cucumber
-- [ ] Scenarios tipados con Cucumber
-- [ ] Pact Testing con TS
-- [ ] Pactum con TS
-- [ ] Tipado de contratos en Pactum
-- [ ] Tipado de contratos en Pact
-- [ ] Consumer-driven contracts
-- [ ] Provider-driven contracts
-- [ ] Generación de contratos con TS
-- [ ] Validación de contratos con TS
-- [ ] Contratos REST tipados
-- [ ] Contratos GraphQL tipados
-- [ ] Contratos gRPC tipados
-- [ ] Contratos WebSocket tipados
-- [ ] Contratos de eventos tipados
-- [ ] Contratos de colas tipados
-- [ ] Contratos de streams tipados
-- [ ] Contratos de observables tipados
-- [ ] Testing de microservicios
-- [ ] Testing de serverless
-- [ ] Testing de workers
-- [ ] Testing de edge functions
-- [ ] Testing de caching
-- [ ] Testing de CDNs
-- [ ] Testing de logging
-- [ ] Testing de métricas
-- [ ] Testing de tracing
-- [ ] Testing de seguridad
-- [ ] Testing de roles y permisos
-- [ ] Testing de feature flags
-- [ ] Testing de AB testing
-- [ ] Testing de internacionalización
-- [ ] Mocking de contratos
-- [ ] Mocking de REST
-- [ ] Mocking de GraphQL
-- [ ] Mocking de gRPC
-- [ ] Mocking de WebSockets
-- [ ] Mocking de eventos
-- [ ] Mocking de streams
-- [ ] Validación runtime de contratos
-- [ ] Validación compile-time de contratos
-- [ ] Generación de tipos desde Swagger
-- [ ] Generación de tipos desde OpenAPI
-- [ ] Generación de tipos desde GraphQL
-- [ ] Generación de tipos desde gRPC proto
-- [ ] Generación de tipos desde JSON Schema
-- [ ] Generación de tipos desde Avro
-- [ ] Generación de tipos desde Protobuf
-- [ ] Generación de tipos desde Thrift
-- [ ] Validación de backward compatibility
-- [ ] Validación de forward compatibility
-- [ ] Validación de cambios de esquema
-- [ ] Testing de migraciones de contratos
-- [ ] Testing de endpoints versionados
-- [ ] Testing de APIs federadas
-- [ ] Testing de APIs monolíticas
-- [ ] Testing de APIs distribuidas
-- [ ] Testing de APIs híbridas
-- [ ] Testing en CI/CD
-- [ ] Testing paralelo
-- [ ] Testing distribuido
-- [ ] Testing escalable
-- [ ] Reportes de E2E
-- [ ] Reportes de contratos
-- [ ] Visualización de resultados
-- [ ] Logs de E2E
-- [ ] Métricas de E2E
-- [ ] Anti-patterns en E2E
-- [ ] Tests frágiles
-- [ ] Tests lentos
-- [ ] Tests sin tipado
-- [ ] Tests duplicados
-- [ ] Contratos inconsistentes
-- [ ] Contratos no validados
-- [ ] Ejercicios de contratos REST
-- [ ] Ejercicios de contratos GraphQL
-- [ ] Ejercicios de contratos gRPC
-- [ ] Ejercicios de contratos WS
-- [ ] Retos de E2E distribuidos
-- [ ] Retos de compatibilidad
-- [ ] Ejercicios de pact testing
-- [ ] Mini-proyecto: Suite E2E + contratos tipados
-
-## 📘 Módulo 27: gRPC, WebSockets y Comunicación en Tiempo Real con TS
-
-> **Propósito:** Aprender a implementar y tipar comunicación en tiempo real y RPC en TypeScript.
-
-- [ ] Introducción a RPC en TS
-- [ ] Concepto de gRPC
-- [ ] Protobuf con TS
-- [ ] Definición de servicios en .proto
-- [ ] Generación de tipos con ts-proto
-- [ ] Generación de tipos con protobufjs
-- [ ] Tipado de servicios gRPC
-- [ ] Tipado de clientes gRPC
-- [ ] Tipado de streams gRPC
-- [ ] Tipado de metadata gRPC
-- [ ] Tipado de errors gRPC
-- [ ] Unary RPC tipado
-- [ ] Server streaming tipado
-- [ ] Client streaming tipado
-- [ ] Bidirectional streaming tipado
-- [ ] gRPC con NestJS
-- [ ] gRPC con Express + TS
-- [ ] gRPC con Fastify + TS
-- [ ] gRPC con Koa + TS
-- [ ] Seguridad en gRPC
-- [ ] TLS en gRPC
-- [ ] Autenticación en gRPC
-- [ ] Autorización en gRPC
-- [ ] Roles en gRPC
-- [ ] Permisos en gRPC
-- [ ] Observabilidad en gRPC
-- [ ] Logs en gRPC
-- [ ] Métricas en gRPC
-- [ ] Tracing en gRPC
-- [ ] Pact testing en gRPC
-- [ ] Anti-patterns en gRPC
-- [ ] Introducción a WebSockets en TS
-- [ ] Tipado de mensajes WebSocket
-- [ ] Tipado de eventos WebSocket
-- [ ] Tipado de handlers WS
-- [ ] Tipado de clientes WS
-- [ ] Tipado de servidores WS
-- [ ] Uso de ws con TS
-- [ ] Uso de socket.io con TS
-- [ ] Uso de uWebSockets con TS
-- [ ] Eventos custom tipados en WS
-- [ ] Mensajes JSON tipados
-- [ ] Validación de mensajes WS
-- [ ] Validación con Zod en WS
-- [ ] Validación con io-ts en WS
-- [ ] WS en NestJS
-- [ ] WS en Fastify
-- [ ] WS en Express
-- [ ] WS en Deno + TS
-- [ ] Seguridad en WS
-- [ ] Autenticación en WS
-- [ ] Autorización en WS
-- [ ] Roles en WS
-- [ ] Permisos en WS
-- [ ] CORS en WS
-- [ ] Rate limiting en WS
-- [ ] Anti-patterns en WS
-- [ ] Testing de WS con Jest
-- [ ] Testing de WS con Vitest
-- [ ] Testing de WS con Pactum
-- [ ] Mocking de WS
-- [ ] Estrategias de reconexión
-- [ ] Estrategias de heartbeat
-- [ ] Estrategias de keepalive
-- [ ] Estrategias de fallback
-- [ ] Estrategias de multiplexing
-- [ ] WS para chat apps
-- [ ] WS para notificaciones
-- [ ] WS para juegos online
-- [ ] WS para IoT
-- [ ] WS para dashboards
-- [ ] WS para colaboraciones en vivo
-- [ ] WS para trading apps
-- [ ] WS para streaming multimedia
-- [ ] WS para sensores
-- [ ] WS para control remoto
-- [ ] WS para robotics
-- [ ] Ejercicios de gRPC
-- [ ] Ejercicios de WS
-- [ ] Ejercicios de streams
-- [ ] Ejercicios de validación WS
-- [ ] Retos de RPC
-- [ ] Retos de tiempo real
-- [ ] Retos de escalabilidad WS
-- [ ] Retos de seguridad WS
-- [ ] Testing de gRPC + WS
-- [ ] Logs en tiempo real tipados
-- [ ] Métricas en tiempo real tipadas
-- [ ] Tracing en tiempo real tipado
-- [ ] Integración con Kafka
-- [ ] Integración con RabbitMQ
-- [ ] Integración con Redis PubSub
 - [ ] Integración con NATS
-- [ ] Integración con MQTT
-- [ ] Integración con SSE
-- [ ] Comparación gRPC vs WS
-- [ ] Comparación WS vs SSE
-- [ ] Anti-patterns de RPC y WS
-- [ ] Ejercicios avanzados de tiempo real
-- [ ] Mini-proyecto: Chat en tiempo real con gRPC + WS
+- [ ] Integración con Azure IoT Hub
+- [ ] Integración con AWS IoT Core
+- [ ] Integración con GCP IoT Core
+- [ ] Integración con KubeEdge
+- [ ] Integración con EdgeX Foundry
+- [ ] Testing de dispositivos IoT
+- [ ] Mocking de sensores IoT
+- [ ] Mocking de actuadores IoT
+- [ ] Simulación de gateways IoT
+- [ ] Simulación de redes IoT
+- [ ] Performance en IoT con TS
+- [ ] Latencia en IoT
+- [ ] Throughput en IoT
+- [ ] Consumo energético en IoT
+- [ ] Optimización de payloads
+- [ ] Optimización de protocolos
+- [ ] Retos de escalabilidad IoT
+- [ ] Retos de resiliencia IoT
+- [ ] Retos de seguridad IoT
+- [ ] Retos de observabilidad IoT
+- [ ] Retos de compatibilidad IoT
+- [ ] Anti-patterns en IoT con TS
+- [ ] Falta de validación de datos
+- [ ] Falta de cifrado en IoT
+- [ ] Falta de logs en IoT
+- [ ] Falta de métricas en IoT
+- [ ] Ejercicios de MQTT tipado
+- [ ] Ejercicios de AMQP tipado
+- [ ] Ejercicios de CoAP tipado
+- [ ] Ejercicios de LwM2M tipado
+- [ ] Ejercicios de WebSockets IoT
+- [ ] Ejercicios de gRPC IoT
+- [ ] Ejercicios de sensores tipados
+- [ ] Ejercicios de actuadores tipados
+- [ ] Ejercicios de gateways tipados
+- [ ] Ejercicios de clusters IoT
+- [ ] Ejercicios de redes IoT
+- [ ] Ejercicios de seguridad IoT
+- [ ] Ejercicios de observabilidad IoT
+- [ ] Ejercicios de performance IoT
+- [ ] Ejercicios de escalabilidad IoT
+- [ ] Ejercicios de resiliencia IoT
+- [ ] Ejercicios de compatibilidad IoT
+- [ ] Casos de uso reales con TS en IoT
+- [ ] Retos avanzados de IoT
+- [ ] Simulación de smart city en TS
+- [ ] Mini-proyecto: Plataforma IoT con TS + MQTT
 
-## 📘 Módulo 28: Serverless, Edge y Cloud Functions en TypeScript
+## 📘 Módulo 34: TypeScript en Finanzas y Sistemas Críticos
+> **Propósito:** Aplicar TS en fintech, trading y sistemas financieros donde el tipado fuerte es vital.
 
-> **Propósito:** Desplegar aplicaciones TS en entornos serverless y edge con tipado seguro.
+- [ ] Introducción a fintech con TS
+- [ ] Sistemas financieros críticos
+- [ ] Concepto de exactitud decimal en TS
+- [ ] Librerías de precisión numérica (decimal.js)
+- [ ] Tipado de BigInt en TS
+- [ ] Tipado de divisas
+- [ ] Tipado de tasas de cambio
+- [ ] Tipado de cuentas bancarias
+- [ ] Tipado de transacciones
+- [ ] Tipado de usuarios financieros
+- [ ] Tipado de KYC (Know Your Customer)
+- [ ] Tipado de AML (Anti-Money Laundering)
+- [ ] Validación de IBAN con TS
+- [ ] Validación de SWIFT con TS
+- [ ] Validación de CLABE con TS
+- [ ] Validación de SPEI con TS
+- [ ] Validación de tarjetas de crédito
+- [ ] Luhn Algorithm en TS
+- [ ] Seguridad en sistemas financieros
+- [ ] Cifrado en transacciones
+- [ ] Hashing de datos sensibles
+- [ ] Firmas digitales en pagos
+- [ ] Tokens JWT en pagos
+- [ ] OAuth2 en fintech
+- [ ] OpenID Connect en fintech
+- [ ] Autenticación MFA en pagos
+- [ ] Autenticación biométrica en fintech
+- [ ] Logs de auditoría financieros
+- [ ] Métricas financieras tipadas
+- [ ] Tracing en sistemas de trading
+- [ ] Observabilidad en pagos
+- [ ] Sistemas de liquidación tipados
+- [ ] Sistemas de clearing tipados
+- [ ] Protocolos ISO 20022
+- [ ] Protocolos FIX para trading
+- [ ] WebSockets en trading apps
+- [ ] gRPC en trading apps
+- [ ] APIs REST en fintech
+- [ ] GraphQL en fintech
+- [ ] Blockchain APIs en TS
+- [ ] Ethereum Web3 con TS
+- [ ] Solana Web3 con TS
+- [ ] Bitcoin APIs con TS
+- [ ] Stablecoins APIs con TS
+- [ ] Smart contracts tipados
+- [ ] Testing de contratos con TS
+- [ ] Integración de wallets en TS
+- [ ] Ledger wallets con TS
+- [ ] Metamask con TS
+- [ ] Custodia de criptoactivos
+- [ ] Seguridad en APIs cripto
+- [ ] Detección de fraude en TS
+- [ ] Machine learning en fintech
+- [ ] Análisis de riesgo tipado
+- [ ] Credit scoring tipado
+- [ ] Simulación de mercados con TS
+- [ ] Algoritmos de trading tipados
+- [ ] Backtesting en TS
+- [ ] Forward testing en TS
+- [ ] Bots de trading con TS
+- [ ] Estrategias de arbitraje tipadas
+- [ ] Estrategias de scalping tipadas
+- [ ] Estrategias de market making
+- [ ] Estrategias de momentum
+- [ ] Estrategias de reversión
+- [ ] Monitoreo de trading apps
+- [ ] Alertas financieras tipadas
+- [ ] Alarmas en trading apps
+- [ ] Anti-patterns en fintech con TS
+- [ ] Falta de precisión decimal
+- [ ] Falta de auditoría de datos
+- [ ] Falta de logs en sistemas financieros
+- [ ] Falta de validación en pagos
+- [ ] Falta de cifrado en transacciones
+- [ ] Ejercicios de validación bancaria
+- [ ] Ejercicios de IBAN/SWIFT
+- [ ] Ejercicios de SPEI tipado
+- [ ] Ejercicios de transacciones
+- [ ] Ejercicios de wallets cripto
+- [ ] Ejercicios de blockchain APIs
+- [ ] Ejercicios de smart contracts
+- [ ] Ejercicios de auditoría
+- [ ] Ejercicios de seguridad financiera
+- [ ] Ejercicios de trading APIs
+- [ ] Ejercicios de backtesting
+- [ ] Ejercicios de bots de trading
+- [ ] Ejercicios de arbitraje
+- [ ] Ejercicios de market making
+- [ ] Ejercicios de risk scoring
+- [ ] Ejercicios de AML/KYC
+- [ ] Retos de compliance en TS
+- [ ] Retos de auditoría en TS
+- [ ] Retos de precisión decimal
+- [ ] Retos de escalabilidad financiera
+- [ ] Retos de seguridad financiera
+- [ ] Retos de alta frecuencia
+- [ ] Retos de resiliencia en fintech
+- [ ] Retos de AI en fintech
+- [ ] Retos de cripto en TS
+- [ ] Mini-proyecto: Plataforma fintech fullstack tipada
 
-- [ ] Introducción a serverless con TS
-- [ ] AWS Lambda con TS
-- [ ] Tipado de handlers en Lambda
-- [ ] Tipado de events en Lambda
-- [ ] Tipado de context en Lambda
-- [ ] Tipado de responses en Lambda
-- [ ] Tipado de errores en Lambda
-- [ ] API Gateway con TS
-- [ ] S3 events con TS
-- [ ] DynamoDB events con TS
-- [ ] SQS events con TS
-- [ ] Kinesis events con TS
-- [ ] CloudWatch events con TS
-- [ ] Step Functions con TS
-- [ ] CDK con TS
-- [ ] Serverless Framework con TS
-- [ ] SST (Serverless Stack) con TS
-- [ ] Vercel Functions con TS
-- [ ] Netlify Functions con TS
-- [ ] Cloudflare Workers con TS
-- [ ] Tipado de requests en Workers
-- [ ] Tipado de responses en Workers
-- [ ] Tipado de KV en Workers
-- [ ] Tipado de Durable Objects
-- [ ] Tipado de D1 (SQLite Cloudflare)
-- [ ] Edge Functions con Vercel
-- [ ] Edge Functions con Supabase
-- [ ] Edge Functions con Deno Deploy
-- [ ] Edge Functions con Fly.io
-- [ ] Edge Functions con Bun
-- [ ] Observabilidad en serverless
-- [ ] Logs en serverless
-- [ ] Métricas en serverless
-- [ ] Tracing en serverless
-- [ ] Testing en serverless
-- [ ] Mocking de Lambdas
-- [ ] Mocking de Workers
-- [ ] Mocking de Edge Functions
-- [ ] Performance en serverless
-- [ ] Cold starts en serverless
-- [ ] Warm starts en serverless
-- [ ] Concurrencia en serverless
-- [ ] Timeouts en serverless
-- [ ] Memory leaks en serverless
-- [ ] Cost optimization en serverless
-- [ ] Pricing models en AWS/GCP/Azure
-- [ ] Limits en serverless
-- [ ] Estrategias de retry en serverless
-- [ ] Estrategias de DLQ (dead letter queue)
-- [ ] Seguridad en serverless
-- [ ] Secrets en serverless
-- [ ] Configs en serverless
-- [ ] IAM en serverless
-- [ ] Roles y permisos
-- [ ] Edge caching
-- [ ] Edge KV storage
-- [ ] Edge security
-- [ ] Edge performance
-- [ ] Edge observability
-- [ ] Edge testing
-- [ ] Anti-patterns en serverless
-- [ ] Lambdas monolíticas
-- [ ] Workers demasiado grandes
-- [ ] Cold starts ignorados
-- [ ] Falta de observabilidad
-- [ ] Ejercicios de Lambdas
-- [ ] Ejercicios de Workers
-- [ ] Ejercicios de Edge
-- [ ] Ejercicios de APIs serverless
-- [ ] Ejercicios de storage serverless
-- [ ] Ejercicios de event-driven
-- [ ] Ejercicios de colas en serverless
-- [ ] Ejercicios de DLQ
-- [ ] Ejercicios de Step Functions
-- [ ] Ejercicios de retries
-- [ ] Ejercicios de feature flags
-- [ ] Ejercicios de seguridad serverless
-- [ ] Retos de cold starts
-- [ ] Retos de observabilidad
-- [ ] Retos de escalabilidad
-- [ ] Retos de seguridad
-- [ ] Retos de pricing
-- [ ] Retos de vendor lock-in
-- [ ] Comparación AWS vs GCP vs Azure
-- [ ] Comparación Workers vs Lambda
-- [ ] Comparación Edge vs Serverless clásico
-- [ ] Casos de uso para serverless
-- [ ] Casos de uso para Edge
-- [ ] Casos de uso para híbrido
-- [ ] Estrategias multi-cloud
-- [ ] Estrategias híbridas
-- [ ] Ejercicios de despliegue multi-cloud
-- [ ] Ejercicios de despliegue híbrido
-- [ ] Ejercicios de failover
-- [ ] Ejercicios de disaster recovery
-- [ ] Anti-patterns en Edge
-- [ ] Ejercicios de funciones Edge
-- [ ] Ejercicios de Workers avanzados
-- [ ] Retos de escalabilidad Edge
-- [ ] Mini-proyecto: Sistema global en Edge Functions TS
+## 📘 Módulo 35: Big Data, Streams y Procesamiento Masivo con TypeScript
+> **Propósito:** Procesar datos a gran escala con TS, integrando streams, pipelines y data lakes.
 
-## 📘 Módulo 29: Microservicios y Distribución en TypeScript
-
-> **Propósito:** Construir arquitecturas distribuidas con TS, microservicios, mensajería y resiliencia.
-
-- [ ] Introducción a microservicios con TS
-- [ ] Monolito vs microservicio
-- [ ] Comunicación sincrónica vs asincrónica
-- [ ] Event-driven architecture
-- [ ] Domain-driven design (DDD) en microservicios
-- [ ] Contextos delimitados tipados
-- [ ] Value Objects en microservicios
-- [ ] Entities en microservicios
-- [ ] Aggregates en microservicios
-- [ ] Domain Events tipados
-- [ ] CQRS con TS
-- [ ] Event Sourcing con TS
-- [ ] Saga Pattern con TS
-- [ ] Orquestación de servicios
-- [ ] Coreografía de eventos
-- [ ] Mensajería con Kafka
-- [ ] Mensajería con RabbitMQ
-- [ ] Mensajería con NATS
-- [ ] Mensajería con MQTT
-- [ ] Mensajería con Redis Streams
-- [ ] Tipado de productores Kafka
-- [ ] Tipado de consumidores Kafka
-- [ ] Tipado de producers RabbitMQ
-- [ ] Tipado de consumers RabbitMQ
-- [ ] Tipado de mensajes en NATS
-- [ ] Tipado de tópicos en MQTT
-- [ ] Tipado de streams en Redis
-- [ ] Validación de mensajes en microservicios
-- [ ] Validación con Zod en microservicios
-- [ ] Validación con io-ts en microservicios
-- [ ] Integración de tRPC en microservicios
-- [ ] Integración de gRPC en microservicios
-- [ ] Integración de GraphQL en microservicios
-- [ ] Integración de REST en microservicios
-- [ ] API Gateway con TS
-- [ ] BFF (Backend for Frontend) tipado
-- [ ] Service Mesh con TS
-- [ ] Istio + TS
-- [ ] Linkerd + TS
-- [ ] Consul + TS
-- [ ] Configuración de Envoy
-- [ ] Configuración de Kong
-- [ ] Configuración de Traefik
-- [ ] Circuit Breaker en microservicios
-- [ ] Bulkhead en microservicios
-- [ ] Retry policy en microservicios
-- [ ] Rate limiting en microservicios
-- [ ] Fallbacks en microservicios
-- [ ] Failover en microservicios
-- [ ] Disaster recovery en microservicios
-- [ ] Observabilidad en microservicios
+- [ ] Introducción a big data con TS
+- [ ] Tipado de datasets masivos
+- [ ] Streams en Node.js
+- [ ] Tipado de streams en TS
+- [ ] Readable streams tipados
+- [ ] Writable streams tipados
+- [ ] Duplex streams tipados
+- [ ] Transform streams tipados
+- [ ] Async iterators en streams
+- [ ] Pipelines tipadas
+- [ ] EventEmitter tipado
+- [ ] Backpressure en streams
+- [ ] Error handling en streams
+- [ ] Observabilidad en streams
+- [ ] Logs en pipelines
+- [ ] Métricas en pipelines
+- [ ] Tracing en pipelines
+- [ ] Kafka con TS
+- [ ] Tipado de producers Kafka
+- [ ] Tipado de consumers Kafka
+- [ ] RabbitMQ con TS
+- [ ] NATS con TS
+- [ ] MQTT con TS
+- [ ] Redis Streams con TS
+- [ ] Google Pub/Sub con TS
+- [ ] AWS Kinesis con TS
+- [ ] Azure Event Hubs con TS
+- [ ] Batch processing tipado
+- [ ] Micro-batching en TS
+- [ ] Windowing en streams
+- [ ] Sliding windows
+- [ ] Tumbling windows
+- [ ] Session windows
+- [ ] Tipado de jobs en big data
+- [ ] MapReduce en TS
+- [ ] ETL pipelines en TS
+- [ ] ELT pipelines en TS
+- [ ] Validación de datos masivos
+- [ ] Validación con Zod en big data
+- [ ] Validación con io-ts en big data
+- [ ] Data lakes con TS
+- [ ] S3 data lake tipado
+- [ ] GCP data lake tipado
+- [ ] Azure data lake tipado
+- [ ] Tipado de esquemas en big data
+- [ ] JSON Schema en big data
+- [ ] Avro con TS
+- [ ] Protobuf con TS
+- [ ] Thrift con TS
+- [ ] ORC/Parquet con TS
+- [ ] Data warehouses con TS
+- [ ] BigQuery con TS
+- [ ] Snowflake con TS
+- [ ] Redshift con TS
+- [ ] Synapse con TS
+- [ ] Data marts tipados
+- [ ] OLAP con TS
+- [ ] OLTP con TS
+- [ ] BI tools con TS
+- [ ] Dashboards con TS
+- [ ] PowerBI con TS
+- [ ] Tableau con TS
+- [ ] Superset con TS
+- [ ] Grafana con TS
+- [ ] Prometheus con TS
+- [ ] AI en big data con TS
+- [ ] ML pipelines con TS
+- [ ] RAG sobre big data
+- [ ] Vector databases en big data
+- [ ] Observabilidad en big data
 - [ ] Logs distribuidos tipados
 - [ ] Métricas distribuidas tipadas
-- [ ] Tracing distribuido con TS
-- [ ] OpenTelemetry con TS
-- [ ] Jaeger con TS
-- [ ] Zipkin con TS
-- [ ] Honeycomb con TS
-- [ ] Seguridad en microservicios
-- [ ] IAM distribuido
-- [ ] Autenticación en microservicios
-- [ ] Autorización en microservicios
-- [ ] Roles en microservicios
-- [ ] Permisos en microservicios
-- [ ] Auditoría en microservicios
-- [ ] Pruebas de microservicios
-- [ ] Unit tests distribuidos
-- [ ] Integration tests distribuidos
-- [ ] E2E tests distribuidos
-- [ ] Contract testing distribuidos
-- [ ] Mocking de microservicios
-- [ ] Testing de resiliencia
-- [ ] Testing de performance
-- [ ] Testing de seguridad
-- [ ] Anti-patterns en microservicios
-- [ ] Demasiados servicios pequeños
-- [ ] Acoplamiento fuerte
-- [ ] Falta de contratos tipados
-- [ ] Falta de observabilidad
-- [ ] Falta de seguridad
-- [ ] Retos de latencia
+- [ ] Tracing distribuido tipado
+- [ ] Retos de latencia en big data
+- [ ] Retos de throughput
 - [ ] Retos de consistencia
-- [ ] Retos de disponibilidad
-- [ ] Retos de escalabilidad
 - [ ] Retos de resiliencia
-- [ ] Estrategias híbridas monolito+microservicios
-- [ ] Estrategias de migración progresiva
-- [ ] Estrategias de compatibilidad backward
-- [ ] Estrategias de compatibilidad forward
-- [ ] Estrategias de tolerancia a fallos
-- [ ] Estrategias de recuperación automática
-- [ ] Estrategias de orquestación
-- [ ] Estrategias de coreografía
-- [ ] Comparación microservicios vs monolito modular
-- [ ] Comparación microservicios vs serverless
-- [ ] Ejercicios de mensajería tipada
-- [ ] Ejercicios de resiliencia tipada
+- [ ] Retos de escalabilidad
+- [ ] Anti-patterns en big data
+- [ ] Falta de validación de datos
+- [ ] Falta de observabilidad
+- [ ] Falta de resiliencia en pipelines
+- [ ] Falta de seguridad en streams
+- [ ] Ejercicios de Kafka tipado
+- [ ] Ejercicios de RabbitMQ tipado
+- [ ] Ejercicios de MQTT tipado
+- [ ] Ejercicios de Redis Streams
+- [ ] Ejercicios de Kinesis tipado
+- [ ] Ejercicios de Pub/Sub tipado
+- [ ] Ejercicios de batch processing
+- [ ] Ejercicios de windowing
+- [ ] Ejercicios de MapReduce
+- [ ] Ejercicios de ETL pipelines
+- [ ] Ejercicios de ELT pipelines
+- [ ] Ejercicios de data lakes
+- [ ] Ejercicios de data warehouses
 - [ ] Ejercicios de observabilidad
-- [ ] Ejercicios de seguridad distribuida
-- [ ] Mini-proyecto: Plataforma de microservicios en TS
+- [ ] Ejercicios de resiliencia
+- [ ] Ejercicios de AI pipelines
+- [ ] Mini-proyecto: Pipeline big data en TS con Kafka
+
+## 📘 Módulo 36: Tiempo Real Avanzado y Sistemas de Alta Frecuencia
+> **Propósito:** Construir aplicaciones críticas en tiempo real y baja latencia con TS.
+
+- [ ] Introducción a tiempo real avanzado
+- [ ] Latencia vs throughput
+- [ ] Sistemas de alta frecuencia (HFT)
+- [ ] Arquitectura de HFT con TS
+- [ ] Tipado de eventos de mercado
+- [ ] Tipado de ticks de trading
+- [ ] Tipado de órdenes en HFT
+- [ ] Tipado de fills en HFT
+- [ ] Tipado de cancelaciones en HFT
+- [ ] Optimización de WS para baja latencia
+- [ ] Optimización de gRPC para HFT
+- [ ] Optimización de REST en HFT
+- [ ] Tipado de colas de órdenes
+- [ ] Validación de órdenes con Zod
+- [ ] Validación de fills con io-ts
+- [ ] Validación de datos en streams
+- [ ] Risk management en HFT
+- [ ] Credit limits tipados
+- [ ] Margin checks tipados
+- [ ] Stop-loss tipado
+- [ ] Circuit breakers en TS
+- [ ] Latency monitoring en TS
+- [ ] Logs de HFT tipados
+- [ ] Métricas de HFT tipadas
+- [ ] Tracing en HFT tipado
+- [ ] Performance testing en TS
+- [ ] Benchmarking en TS
+- [ ] Profiling en Node.js
+- [ ] Profiling con Chrome DevTools
+- [ ] Profiling con Clinic.js
+- [ ] Threads en Node.js
+- [ ] Worker Threads en TS
+- [ ] Clustering en TS
+- [ ] Load balancing en TS
+- [ ] Sharding en TS
+- [ ] Shared memory en TS
+- [ ] Zero-copy buffers en TS
+- [ ] Binary data en TS
+- [ ] ArrayBuffers tipados
+- [ ] TypedArrays en TS
+- [ ] Node.js Buffer tipado
+- [ ] Serialización binaria
+- [ ] Protobuf en tiempo real
+- [ ] Flatbuffers en TS
+- [ ] Cap’n Proto en TS
+- [ ] Deserialización optimizada
+- [ ] Algoritmos de compresión en TS
+- [ ] Zstd en tiempo real
+- [ ] Snappy en tiempo real
+- [ ] Brotli en tiempo real
+- [ ] Seguridad en tiempo real
+- [ ] Autenticación de baja latencia
+- [ ] Autorización de baja latencia
+- [ ] Minimización de cifrado
+- [ ] TLS en baja latencia
+- [ ] DTLS en TS
+- [ ] QUIC en TS
+- [ ] WebRTC en TS
+- [ ] Tipado de peer connections
+- [ ] Tipado de SDP
+- [ ] Tipado de ICE candidates
+- [ ] Media streams tipados
+- [ ] Data channels tipados
+- [ ] Real-time multimedia con TS
+- [ ] Streaming de audio tipado
+- [ ] Streaming de video tipado
+- [ ] Video conferencias en TS
+- [ ] Juegos multijugador en TS
+- [ ] Sistemas de apuestas en tiempo real
+- [ ] Dashboards de trading en TS
+- [ ] Notificaciones críticas
+- [ ] Alarmas en tiempo real
+- [ ] Detección de anomalías en tiempo real
+- [ ] AI en baja latencia
+- [ ] Edge AI con TS
+- [ ] Modelos comprimidos en edge
+- [ ] WebGPU en tiempo real
+- [ ] TensorFlow.js en edge
+- [ ] onnxruntime en edge
+- [ ] Ejercicios de WS optimizados
+- [ ] Ejercicios de gRPC optimizado
+- [ ] Ejercicios de REST optimizado
+- [ ] Ejercicios de HFT tipado
+- [ ] Ejercicios de profiling
+- [ ] Ejercicios de clustering
+- [ ] Ejercicios de sharding
+- [ ] Ejercicios de worker threads
+- [ ] Ejercicios de binary data
+- [ ] Ejercicios de buffers optimizados
+- [ ] Ejercicios de compresión
+- [ ] Ejercicios de WebRTC tipado
+- [ ] Ejercicios de peer connections
+- [ ] Ejercicios de media streams
+- [ ] Ejercicios de juegos en TS
+- [ ] Ejercicios de AI en edge
+- [ ] Retos de latencia extrema
+- [ ] Retos de resiliencia en tiempo real
+- [ ] Retos de seguridad en HFT
+- [ ] Retos de escalabilidad en HFT
+- [ ] Mini-proyecto: Sistema HFT en TS con latencia <1ms
+
+## 📘 Módulo 37: TypeScript en Realidad Aumentada (AR) y Realidad Virtual (VR)
+> **Propósito:** Aplicar TS en experiencias inmersivas, simulaciones y entornos 3D.
+
+- [ ] Introducción a AR/VR con TS
+- [ ] WebXR API con TS
+- [ ] Tipado de sesiones XR
+- [ ] Tipado de inputs XR
+- [ ] Tipado de outputs XR
+- [ ] Tipado de reference spaces
+- [ ] Tipado de pose
+- [ ] Tipado de hit tests
+- [ ] Tipado de anchors
+- [ ] Tipado de planes
+- [ ] Tipado de imágenes AR
+- [ ] Tipado de video AR
+- [ ] Tipado de audio AR
+- [ ] Tipado de depth sensing
+- [ ] Tipado de hand tracking
+- [ ] Tipado de eye tracking
+- [ ] Tipado de body tracking
+- [ ] Validación de inputs XR
+- [ ] Observabilidad en XR
+- [ ] Logs XR tipados
+- [ ] Métricas XR tipadas
+- [ ] Tracing XR tipado
+- [ ] Seguridad en XR
+- [ ] Privacidad en XR
+- [ ] WebGL con TS
+- [ ] Three.js con TS
+- [ ] Babylon.js con TS
+- [ ] A-Frame con TS
+- [ ] React Three Fiber con TS
+- [ ] Integración XR + Three.js
+- [ ] Integración XR + Babylon.js
+- [ ] Render targets tipados
+- [ ] Texturas tipadas
+- [ ] Materiales tipados
+- [ ] Shaders tipados
+- [ ] GLSL con TS
+- [ ] WebGPU con TS en VR
+- [ ] Modelos 3D tipados
+- [ ] Animaciones tipadas
+- [ ] Física en VR tipada
+- [ ] Colisiones en VR tipadas
+- [ ] Sistemas de partículas
+- [ ] Haptic feedback tipado
+- [ ] Audio espacial tipado
+- [ ] Networking en VR con TS
+- [ ] WebSockets VR
+- [ ] WebRTC VR
+- [ ] gRPC VR
+- [ ] Optimización de performance XR
+- [ ] Frame pacing
+- [ ] Motion smoothing
+- [ ] Latency reduction
+- [ ] Anti-patterns en XR con TS
+- [ ] Falta de tipado de poses
+- [ ] Falta de validación de inputs
+- [ ] Ejercicios de WebXR
+- [ ] Ejercicios de Three.js
+- [ ] Ejercicios de Babylon.js
+- [ ] Ejercicios de hand tracking
+- [ ] Ejercicios de eye tracking
+- [ ] Ejercicios de audio espacial
+- [ ] Ejercicios de física XR
+- [ ] Ejercicios de shaders XR
+- [ ] Ejercicios de networking XR
+- [ ] Retos de latencia XR
+- [ ] Retos de seguridad XR
+- [ ] Retos de privacidad XR
+- [ ] Retos de escalabilidad XR
+- [ ] Retos de cross-device XR
+- [ ] Integración AR + AI
+- [ ] Integración VR + AI
+- [ ] Integración AR + IoT
+- [ ] Integración VR + IoT
+- [ ] AR para educación
+- [ ] VR para entrenamiento
+- [ ] AR en retail
+- [ ] VR en medicina
+- [ ] AR en arquitectura
+- [ ] VR en defensa
+- [ ] AR en arte
+- [ ] VR en juegos
+- [ ] Ejercicios de aplicaciones AR
+- [ ] Ejercicios de aplicaciones VR
+- [ ] Retos de multi-user XR
+- [ ] Retos de multi-device XR
+- [ ] AR Cloud tipado
+- [ ] Spatial anchors tipados
+- [ ] Mapas 3D tipados
+- [ ] SLAM en TS
+- [ ] Computer vision en TS
+- [ ] Ejercicios de SLAM
+- [ ] Ejercicios de CV + XR
+- [ ] Ejercicios de AR Cloud
+- [ ] Ejercicios de AI en AR
+- [ ] Ejercicios de AI en VR
+- [ ] Anti-patterns en AR/VR
+- [ ] Ejercicios de optimización XR
+- [ ] Retos de UX XR
+- [ ] Ejercicios de integración XR
+- [ ] Mini-proyecto: Simulador AR/VR tipado en TS
+
+## 📘 Módulo 38: TypeScript en Blockchain y Web3
+> **Propósito:** Usar TS para contratos inteligentes, wallets y dApps seguras.
+
+- [ ] Introducción a blockchain con TS
+- [ ] Tipado de bloques
+- [ ] Tipado de transacciones
+- [ ] Tipado de wallets
+- [ ] Tipado de nodos
+- [ ] Tipado de smart contracts
+- [ ] Ethereum Web3.js con TS
+- [ ] Ethers.js con TS
+- [ ] Solana Web3 con TS
+- [ ] Polkadot.js con TS
+- [ ] Cosmos SDK con TS
+- [ ] Bitcoin APIs en TS
+- [ ] Cardano APIs en TS
+- [ ] Avalanche APIs en TS
+- [ ] Near APIs en TS
+- [ ] Algorand APIs en TS
+- [ ] Tipado de gas fees
+- [ ] Tipado de nonces
+- [ ] Tipado de signatures
+- [ ] Tipado de hashes
+- [ ] Tipado de Merkle proofs
+- [ ] Tipado de Merkle trees
+- [ ] Tipado de light clients
+- [ ] Tipado de validators
+- [ ] Tipado de consensus
+- [ ] Tipado de staking
+- [ ] Tipado de delegations
+- [ ] Tipado de slashing
+- [ ] Wallet integration en TS
+- [ ] Metamask con TS
+- [ ] Ledger con TS
+- [ ] Trezor con TS
+- [ ] Phantom con TS
+- [ ] Tipado de NFTs
+- [ ] ERC-20 tipado
+- [ ] ERC-721 tipado
+- [ ] ERC-1155 tipado
+- [ ] Solana tokens tipados
+- [ ] Algorand ASA tipados
+- [ ] Smart contracts en Solidity + TS
+- [ ] Smart contracts en Rust + TS
+- [ ] Smart contracts en Move + TS
+- [ ] Testing de contratos con TS
+- [ ] Hardhat con TS
+- [ ] Truffle con TS
+- [ ] Foundry con TS
+- [ ] Deploys de contratos con TS
+- [ ] Gas optimization en contratos
+- [ ] Seguridad en contratos
+- [ ] Slither con TS
+- [ ] Mythril con TS
+- [ ] Audits en contratos con TS
+- [ ] Observabilidad en dApps
+- [ ] Logs blockchain tipados
+- [ ] Métricas blockchain tipadas
+- [ ] Tracing blockchain tipado
+- [ ] Off-chain data tipado
+- [ ] Oracles con TS
+- [ ] Chainlink con TS
+- [ ] Pyth con TS
+- [ ] Band Protocol con TS
+- [ ] Subgraphs en TS
+- [ ] The Graph con TS
+- [ ] Validación de datos on-chain
+- [ ] Validación de datos off-chain
+- [ ] dApps con React + TS
+- [ ] dApps con Vue + TS
+- [ ] dApps con Angular + TS
+- [ ] dApps con Svelte + TS
+- [ ] Next.js + TS para Web3
+- [ ] WalletConnect con TS
+- [ ] ENS con TS
+- [ ] DID (identidad descentralizada)
+- [ ] SSI (self-sovereign identity)
+- [ ] Token gating con TS
+- [ ] DAOs tipadas en TS
+- [ ] Gobernanza en TS
+- [ ] Voting tipado en TS
+- [ ] Treasury tipado en TS
+- [ ] Multi-sig tipado
+- [ ] Bridges tipados
+- [ ] Cross-chain messaging
+- [ ] Layer 2 en TS
+- [ ] Rollups tipados
+- [ ] zk-SNARKs en TS
+- [ ] zk-STARKs en TS
+- [ ] Validium en TS
+- [ ] Plasma en TS
+- [ ] Ejercicios de wallets tipados
+- [ ] Ejercicios de contratos tipados
+- [ ] Ejercicios de oracles tipados
+- [ ] Ejercicios de dApps tipados
+- [ ] Retos de escalabilidad blockchain
+- [ ] Retos de seguridad blockchain
+- [ ] Retos de interoperabilidad
+- [ ] Retos de gobernanza
+- [ ] Anti-patterns en Web3 con TS
+- [ ] Ejercicios de rollups tipados
+- [ ] Ejercicios de DAOs tipados
+- [ ] Mini-proyecto: dApp completa con TS + Web3
+
+## 📘 Módulo 39: TypeScript en Ciberseguridad
+> **Propósito:** Usar TS en pentesting, análisis de seguridad y hardening de apps.
+
+- [ ] Introducción a seguridad en TS
+- [ ] Tipado de políticas de seguridad
+- [ ] Tipado de roles y permisos
+- [ ] OWASP Top 10 con TS
+- [ ] Inyección SQL en TS
+- [ ] XSS en TS
+- [ ] CSRF en TS
+- [ ] SSRF en TS
+- [ ] RCE en TS
+- [ ] DoS en TS
+- [ ] Seguridad en REST con TS
+- [ ] Seguridad en GraphQL con TS
+- [ ] Seguridad en gRPC con TS
+- [ ] Seguridad en WebSockets con TS
+- [ ] Seguridad en Edge Functions
+- [ ] Autenticación con TS
+- [ ] Autorización con TS
+- [ ] MFA en TS
+- [ ] Password hashing en TS
+- [ ] Argon2 con TS
+- [ ] bcrypt con TS
+- [ ] scrypt con TS
+- [ ] PBKDF2 con TS
+- [ ] Tokenización en TS
+- [ ] JWT en TS
+- [ ] OAuth2 en TS
+- [ ] OpenID Connect en TS
+- [ ] Seguridad en cookies
+- [ ] SameSite en TS
+- [ ] HttpOnly en TS
+- [ ] Secure flag en TS
+- [ ] CSP en TS
+- [ ] CORS seguro en TS
+- [ ] Rate limiting en TS
+- [ ] Brute force protection en TS
+- [ ] Logs de seguridad tipados
+- [ ] Métricas de seguridad tipadas
+- [ ] Tracing de ataques
+- [ ] Honeypots en TS
+- [ ] WAF con TS
+- [ ] IDS con TS
+- [ ] IPS con TS
+- [ ] Seguridad en microservicios
+- [ ] Seguridad en serverless
+- [ ] Seguridad en monorepos
+- [ ] Seguridad en CI/CD
+- [ ] Seguridad en DevOps
+- [ ] Seguridad en containers
+- [ ] Docker security con TS
+- [ ] Kubernetes security con TS
+- [ ] RBAC en Kubernetes con TS
+- [ ] PodSecurityPolicy con TS
+- [ ] NetworkPolicy con TS
+- [ ] Zero Trust con TS
+- [ ] IAM con TS
+- [ ] Seguridad en IaC con TS
+- [ ] Pulumi security con TS
+- [ ] CDK security con TS
+- ] Terraform CDK security
+- [ ] Vulnerability scanning en TS
+- [ ] Snyk con TS
+- [ ] Dependabot con TS
+- [ ] npm audit en TS
+- [ ] Mitigación de ataques
+- [ ] Red Team con TS
+- [ ] Blue Team con TS
+- [ ] Purple Team con TS
+- [ ] Ejercicios de hardening
+- [ ] Ejercicios de logs seguros
+- [ ] Ejercicios de XSS prevention
+- [ ] Ejercicios de CSRF prevention
+- [ ] Ejercicios de SSRF prevention
+- [ ] Ejercicios de SQLi prevention
+- [ ] Ejercicios de JWT seguro
+- [ ] Ejercicios de OAuth2 seguro
+- [ ] Ejercicios de RBAC
+- [ ] Ejercicios de IAM
+- [ ] Retos de Zero Trust
+- [ ] Retos de DevSecOps
+- [ ] Retos de IaC seguro
+- [ ] Anti-patterns en seguridad
+- [ ] Falta de validación
+- [ ] Dependencias sin auditoría
+- [ ] Logs inseguros
+- [ ] Configs sin cifrado
+- [ ] Ejercicios de CTF en TS
+- [ ] Ejercicios de explotación en TS
+- [ ] Ejercicios de hardening apps
+- [ ] Ejercicios de seguridad web
+- [ ] Ejercicios de seguridad API
+- [ ] Ejercicios de seguridad cloud
+- [ ] Retos de escalabilidad en seguridad
+- [ ] Retos de compliance en TS
+- [ ] Retos de auditoría en TS
+- [ ] Retos de privacidad en TS
+- [ ] Retos de cifrado en TS
+- [ ] Ejercicios de observabilidad
+- [ ] Ejercicios de mitigación
+- [ ] Ejercicios de red team
+- [ ] Mini-proyecto: Plataforma segura fullstack en TS
+
+---
+## 🛠️ Cómo Utilizar este Repositorio
+
+Este repositorio es mi hoja de ruta personal y un documento vivo para mi aprendizaje de TypeScript. Lo utilizo de la siguiente manera:
+
+* **Tracking de Progreso:** Marco las casillas (`- [x]`) a medida que completo y entiendo cada tema.
+* **Documento de Referencia:** Sirve como un índice de alta velocidad para encontrar y repasar conceptos específicos.
+* **Fuente de Motivación:** Ver el progreso visualmente me ayuda a mantenerme enfocado y disciplinado en mi meta.
+
+Siéntete libre de clonar (`fork`) este repositorio para seguir tu propio camino de aprendizaje.
+
+## 🎯 Metas del Proyecto
+
+Mi objetivo con este plan de estudios no es solo aprender la sintaxis, sino alcanzar un nivel de maestría que me permita:
+
+* **Construir Aplicaciones Full-Stack Robustas:** Desarrollar proyectos complejos y escalables de principio a fin con un tipado estricto.
+* **Contribuir a Proyectos Open Source:** Tener la confianza y el conocimiento para colaborar en librerías y frameworks del ecosistema TypeScript.
+* **Alcanzar un Nivel Profesional de "Developer Experience":** Dominar el tooling, las pruebas y las arquitecturas que definen a un ingeniero de software de alto nivel.
+* **Prepararme para Roles de Liderazgo Técnico:** Utilizar este conocimiento profundo como base para roles de Senior Developer o Tech Lead.
+
+## 📚 Recursos Clave e Inspiración
+
+Este temario ha sido compilado y enriquecido a partir de diversas fuentes de alta calidad en la comunidad de desarrollo, incluyendo:
+
+* **Documentación Oficial:**
+    * [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+    * [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
+* **Cursos y Plataformas:**
+    * [Total TypeScript (Matt Pocock)](https://www.totaltypescript.com/)
+    * [Execute Program](https://execute-program.com/)
+* **Comunidad y Desarrolladores:**
+    * Canal de YouTube de [Jack Herrington](https://www.youtube.com/c/JackHerrington)
+    * Blog de [Darius Cepulis](https://www.totaltypescript.com/blog)
+
+## 🌐 Conecta Conmigo
+
+¡Me encantaría conectar con otros desarrolladores! Si estás en un viaje similar o tienes alguna sugerencia, no dudes en contactarme.
+
+* **LinkedIn:** [Tu Nombre](https://www.linkedin.com/in/tu-usuario/)
+* **GitHub:** [Tu Usuario](https://github.com/tu-usuario)
+* **Portafolio Web:** [tu-sitio-web.com](https://tu-sitio-web.com)
+
+---
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+**[MIT License](https://choosealicense.com/licenses/mit/)**
